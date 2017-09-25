@@ -168,11 +168,11 @@
                                     <action selector="onClosed:" destination="NT2-Jg-tWT" eventType="touchDown" id="RjF-qv-oMl"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-Qx-grd">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-Qx-grd">
                                 <rect key="frame" x="0.0" y="253" width="375" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                             </webView>
                         </subviews>
                     </view>
