@@ -24,6 +24,9 @@ class sugorokuon_iosTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let a = 3 + 4
+        XCTAssertEqual(a, 7)
     }
     
     func testPerformanceExample() {
@@ -31,6 +34,11 @@ class sugorokuon_iosTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testExample2() {
+        let b = 1 + 3
+        XCTAssertTrue(b < 0)
     }
     
 }

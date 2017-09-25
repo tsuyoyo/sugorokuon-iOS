@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SugorokuonPlaygroundFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>sugorokuon-ios.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5E0241971F5CAA25006C2DF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5E8C22F51F5A6C94005AEBF1</key>
 		<dict>
 			<key>primary</key>

@@ -1,0 +1,41 @@
+PODS:
+  - MaterialComponents/BottomSheet (34.0.1):
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (34.0.1)
+  - MaterialComponents/private/KeyboardWatcher (34.0.1):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (34.0.1)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxSwift (3.6.1)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - XLPagerTabStrip (7.0.0)
+
+DEPENDENCIES:
+  - MaterialComponents/BottomSheet
+  - RealmSwift
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+  - SDWebImage (~> 4.0)
+  - XLPagerTabStrip (~> 7.0)
+
+SPEC CHECKSUMS:
+  MaterialComponents: 46edbf3696a742c20fcb55623667aa36f5a39b60
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
+
+PODFILE CHECKSUM: a99a86a8ca99903f4f53b72967bdd0ff12c0bcc3
+
+COCOAPODS: 1.2.1
