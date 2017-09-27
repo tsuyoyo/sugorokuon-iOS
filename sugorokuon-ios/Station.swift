@@ -6,6 +6,42 @@
 //  Copyright © 2017年 tsuyoyo. All rights reserved.
 //
 
+//<station>
+//<id>FMT</id>
+//<name>TOKYO FM</name>
+//<ascii_name>TOKYO FM</ascii_name>
+//<areafree>1</areafree>
+//<timefree>1</timefree>
+//<logo width="224" height="100" align="lrtrim">
+//https://radiko.jp/v2/static/station/logo/FMT/lrtrim/224x100.png
+//</logo>
+//<logo width="258" height="60" align="lrtrim">
+//https://radiko.jp/v2/static/station/logo/FMT/lrtrim/258x60.png
+//</logo>
+//<logo width="448" height="200" align="lrtrim">
+//https://radiko.jp/v2/static/station/logo/FMT/lrtrim/448x200.png
+//</logo>
+//<logo width="688" height="160" align="lrtrim">
+//https://radiko.jp/v2/static/station/logo/FMT/lrtrim/688x160.png
+//</logo>
+//<logo width="224" height="100" align="center">
+//https://radiko.jp/v2/static/station/logo/FMT/224x100.png
+//</logo>
+//<logo width="258" height="60" align="center">
+//https://radiko.jp/v2/static/station/logo/FMT/258x60.png
+//</logo>
+//<logo width="448" height="200" align="center">
+//https://radiko.jp/v2/static/station/logo/FMT/448x200.png
+//</logo>
+//<logo width="688" height="160" align="center">
+//https://radiko.jp/v2/static/station/logo/FMT/688x160.png
+//</logo>
+//<banner>
+//https://radiko.jp/res/banner/FMT/20161013150235.png
+//</banner>
+//<href>http://www.tfm.co.jp/</href>
+//</station>
+
 import Foundation
 
 class Station {

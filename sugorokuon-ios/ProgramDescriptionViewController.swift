@@ -9,8 +9,14 @@
 import UIKit
 import SafariServices
 
-class ProgramDescriptionViewController: UIViewController { //, UIWebViewDelegate {
-
+class ProgramDescriptionViewController: UIViewController {
+    
+    private let fontStyle =
+        "<head><style>" +
+            "body { " +
+            "  font-size: 12pt;" +
+            "}" +
+            "</style></head>"
 
     private var program : Program?
     private var descriptionData : String?
@@ -32,20 +38,21 @@ class ProgramDescriptionViewController: UIViewController { //, UIWebViewDelegate
         }
         
         if let webView = webView, let program = program {
-            var descriptionData = "<html>"
+            var descriptionData = "<!DOCTYPE html><html>\(fontStyle)<body>"
+
             if let d = program.description {
                 descriptionData += d + "<BR><BR><BR>"
             }
             if let i = program.info {
                 descriptionData += i
             }
-            descriptionData += "</html>"
+            descriptionData += "</body></html>"
+            
             webView.loadHTMLString(descriptionData, baseURL: nil)
             
             firstDataLoading = true
             webView.delegate = self
         }
-        
         // Do any additional setup after loading the view.
     }
 
