@@ -17,28 +17,20 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     private let disposeBag = DisposeBag()
     
-    private var viewModel : TimeTableViewModel?
-    private var station : Station?
-    private var day : Week?
+    private var viewModel : TimeTableViewModel!
+    private var station : Station!
     
     private var programs : Array<Program> = []
     
     @IBOutlet weak var table: UITableView!
 
-    func setup(station: Station,
-               day: Week,
-               repository: TimeTableRepository,
-               urlManager: UrlManager) -> Void {
-        self.viewModel = TimeTableViewModel(repository: repository, urlManager: urlManager)
+    func setup(station: Station, timeTable: TimeTable) {
+        viewModel = TimeTableViewModel(timeTable: timeTable)
         self.station = station
-        self.day = day
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let stationId = station?.id, let day = day {
-            viewModel?.setTimeTable(station: stationId, day: day)
-        }
         bindViewModel()
     }
 
@@ -76,8 +68,13 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         title?.text = p.title
         personalities?.text = p.personality
         
-        if let imageUrl = station?.logoUrl {
+        image?.clipsToBounds = true
+        image?.layer.cornerRadius = (image?.frame.height)! / 2
+        
+        if let imageUrl = p.image {
             image?.sd_setImage(with: URL(string: imageUrl))
+        } else if let stationImageUrl = station?.logoUrl {
+            image?.sd_setImage(with: URL(string: stationImageUrl))
         }
         
         return cell
@@ -85,23 +82,13 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Cell が選択された場合
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        print("on program is selected : title = \(self.programs[indexPath.row].title)")
-        
-        let bottomSheetViewController = UIStoryboard(name: "TimeTable", bundle: nil).instantiateViewController(withIdentifier: "programDescription")
+        let bottomSheet = UIStoryboard(name: "TimeTable", bundle: nil)
+            .instantiateViewController(withIdentifier: "programDescription")
             as! ProgramDescriptionViewController
-//        vc.setup(station: $0, day: .Monday, repository: repository, urlManager: urlManager)
-//        views.append(vc)
-        
-        // View controller the bottom sheet will hold
-//        let bottomSheetViewController = ProgramDescriptionViewController()
-        
-        bottomSheetViewController.modalPresentationStyle = .overCurrentContext
-        
-        let program = self.programs[indexPath.row]        
-        bottomSheetViewController.set(program: program)
 
-        // Present the bottom sheet
-        present(bottomSheetViewController, animated: true, completion: nil)
+        bottomSheet.modalPresentationStyle = .overCurrentContext
+        bottomSheet.set(program: programs[indexPath.row])
+        present(bottomSheet, animated: true, completion: nil)
     }
     
     /*

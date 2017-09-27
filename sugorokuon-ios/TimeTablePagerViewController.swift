@@ -11,16 +11,18 @@ import XLPagerTabStrip
 import RxSwift
 
 // https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9 を参考に
-class TimeTablePagerViewController: ButtonBarPagerTabStripViewController {
+class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSelectorViewControllerDelegate {
 
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     
     private var disposeBag = DisposeBag()
-    private var viewModel : TimeTablePagerViewModel?
+    private var viewModel : TimeTablePagerViewModel!
     
     private var stationParser : XMLParser?
     private var stationParserDelegate : StationResponseParser?
-    private var stations : Array<Station>?
+    
+    private var stations : Array<Station> = []
+    private var timeTables : Array<TimeTable> = []
 
     private let repository = TimeTableRepository()
     private let urlManager = UrlManager()
@@ -30,19 +32,45 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController {
         setupTabBar()
         super.viewDidLoad()
         bindViewModel()
+        viewModel.setAreaAndDate(region: "JP13", date: Date())
+    }
+    
+    @IBAction func onDateSelectClicked(_ sender: Any) {
+        let datePicker = UIStoryboard(name: "DateSelect", bundle: nil)
+            .instantiateViewController(withIdentifier: "dateSelect")
+            as! DateSelectViewController
         
-        viewModel?.setArea(id: "JP13")
+        datePicker.modalPresentationStyle = .overCurrentContext
+        if let dateStr = self.navigationItem.title,
+            let currentDate = getDateFormatForTitle().date(from: dateStr) {
+            datePicker.set(date: currentDate)
+        }
+        
+        datePicker.delegate = self
+        present(datePicker, animated: true, completion: nil)
+    }
+    
+    private func getDateFormatForTitle() -> DateFormatter {
+        let formatter : DateFormatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        return formatter
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         var views : [UIViewController] = []
         
-        self.stations?.forEach {
+        self.stations.forEach { station in
             let vc = UIStoryboard(name: "TimeTable", bundle: nil).instantiateViewController(withIdentifier: "timetable")
             as! TimeTableViewController
-            vc.setup(station: $0, day: .Monday, repository: repository, urlManager: urlManager)
-            views.append(vc)
+
+            let filtered = self.timeTables.filter { t -> Bool in
+                return t.stationId == station.id
+            }
+            if !filtered.isEmpty {
+                vc.setup(station: station, timeTable: filtered[0])
+                views.append(vc)
+            }
         }
         
         if views.isEmpty {
@@ -51,6 +79,11 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController {
         }
         
         return views
+    }
+    
+    // MARK : - DateSelectorViewControllerDelegate
+    func onDateSelected(date: Date) {
+        viewModel.setAreaAndDate(region: "JP13", date: date)
     }
     
     private func setupTabBar() {
@@ -74,12 +107,26 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController {
     private func bindViewModel() {
         viewModel = TimeTablePagerViewModel(urlManager: urlManager)
         
-        viewModel?
-            .fetchedStations
-            .subscribe { event -> Void in
-                self.stations = event.element
+        Observable.combineLatest(
+            viewModel.fetchedStations,
+            viewModel.fetchedTimeTable) { (stations, timeTables) -> Bool in
+                self.stations = stations
+                self.timeTables = timeTables
                 self.reloadPagerTabStripView()
+                return true
             }
+            .subscribeOn(MainScheduler.instance)
+            .subscribe()
             .addDisposableTo(disposeBag)
+        
+        viewModel.selectedDate
+            .subscribeOn(MainScheduler.instance)
+            .do(onNext: self.setTitle)
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
+    
+    private func setTitle(date: Date) {
+        self.navigationItem.title = getDateFormatForTitle().string(from: date)
     }
 }

@@ -1,27 +1,29 @@
 //
-//  TodayTimeTableParser.swift
+//  OneDayTimeTableParser.swift
 //  sugorokuon-ios
 //
-//  Created by tsuyoyo on 2017/09/16.
+//  Created by tsuyoyo on 2017/09/25.
 //  Copyright © 2017年 tsuyoyo. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class TodayTimeTableParser : NSObject, XMLParserDelegate {
+class OneDayTimeTableParser: NSObject , XMLParserDelegate {
     
     private var stationId : String?
     private var stationName : String?
-    
+
     private var parsingElement : String?
     
     private let disposeBag = DisposeBag()
-    private let parserdTimeTable = PublishSubject<TimeTable>()
+    private let parsedTimeTable = PublishSubject<Array<TimeTable>>()
     private var timeTableParser : TimeTableParser?
     
-    public func observeTodayTimeTableParsed() -> Observable<TimeTable> {
-        return parserdTimeTable.asObserver()
+    private var timeTables = Array<TimeTable>()
+    
+    public func observeTodayTimeTableParsed() -> Observable<Array<TimeTable>> {
+        return parsedTimeTable.asObserver()
     }
     
     public func parser(_ parser: XMLParser,
@@ -60,12 +62,15 @@ class TodayTimeTableParser : NSObject, XMLParserDelegate {
                        didEndElement elementName: String,
                        namespaceURI: String?,
                        qualifiedName qName: String?) {
+        if elementName == "stations" {
+            parsedTimeTable.onNext(timeTables)
+        }
         parsingElement = nil
     }
     
     private func onTimeTableParsed(event : RxSwift.Event<TimeTable>) -> Void {
         if let timeTable = event.element {
-            parserdTimeTable.onNext(timeTable)
+            timeTables.append(timeTable)
         }
     }
 }

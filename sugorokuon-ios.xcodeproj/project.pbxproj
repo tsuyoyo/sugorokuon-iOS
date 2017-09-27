@@ -13,6 +13,8 @@
 		5E0241A01F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0241981F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E0241A71F5CCCED006C2DF4 /* Test02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0241A61F5CCCED006C2DF4 /* Test02.swift */; };
 		5E0241AB1F5CCD43006C2DF4 /* StationLogoParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */; };
+		5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
+		5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
 		5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
@@ -67,6 +69,10 @@
 		5EFD3EE81F76AC35006BD744 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
 		5EFD3EE91F76AC3B006BD744 /* StationLogoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0241911F5CA7D2006C2DF4 /* StationLogoParser.swift */; };
 		5EFD3EEA1F76AC4E006BD744 /* TimeTablePagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */; };
+		5EFFDE851F7B27EB00EC8839 /* DateSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */; };
+		5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */; };
+		5EFFDE881F7B287C00EC8839 /* DateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */; };
+		5EFFDE891F7B287C00EC8839 /* DateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */; };
 		624398EB0EC267DC8D8824B2 /* Pods_sugorokuon_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C815211F9BB19B538E03B83 /* Pods_sugorokuon_ios.framework */; };
 		EA96C6BCA32F89267E346B68 /* Pods_sugorokuon_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E365C316A0A64E28A17AC2D7 /* Pods_sugorokuon_iosTests.framework */; };
 /* End PBXBuildFile section */
@@ -128,6 +134,7 @@
 		5E0241981F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SugorokuonPlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0241A61F5CCCED006C2DF4 /* Test02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test02.swift; sourceTree = "<group>"; };
 		5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationLogoParserTest.swift; sourceTree = "<group>"; };
+		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
 		5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationResponseParser.swift; sourceTree = "<group>"; };
 		5E8C22F61F5A6C94005AEBF1 /* sugorokuon-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugorokuon-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +169,8 @@
 		5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDescriptionViewController.swift; sourceTree = "<group>"; };
 		5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewModel.swift; sourceTree = "<group>"; };
 		5EFD3EE41F769D78006BD744 /* UrlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
+		5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateSelect.storyboard; sourceTree = "<group>"; };
+		5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectViewController.swift; sourceTree = "<group>"; };
 		7C815211F9BB19B538E03B83 /* Pods_sugorokuon_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sugorokuon_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93572A495C1F23C62C64B1F1 /* Pods-sugorokuon-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugorokuon-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sugorokuon-iosTests/Pods-sugorokuon-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		A02A0944456CAE26C0C55A82 /* Pods-sugorokuon-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugorokuon-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-sugorokuon-ios/Pods-sugorokuon-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +252,7 @@
 				5EAF63271F6D251E005F74A4 /* TimeTableParser.swift */,
 				5EAF632A1F6D25A1005F74A4 /* ProgreamParser.swift */,
 				5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */,
+				5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -334,6 +344,8 @@
 				5E9334021F73916400631C0F /* TimeTableRepository.swift */,
 				5EAF63421F6D6FEF005F74A4 /* TestViewController.swift */,
 				5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */,
+				5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */,
+				5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */,
 			);
 			name = TimeTable;
 			sourceTree = "<group>";
@@ -468,6 +480,7 @@
 					};
 					5E8C22F51F5A6C94005AEBF1 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZJ43ZSA54N;
 						ProvisioningStyle = Automatic;
 					};
 					5E8C23091F5A6C94005AEBF1 = {
@@ -511,6 +524,7 @@
 			files = (
 				5E8C23041F5A6C94005AEBF1 /* LaunchScreen.storyboard in Resources */,
 				5E9334001F7390B800631C0F /* TImeTableViewController.xib in Resources */,
+				5EFFDE851F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
 				5E8C23011F5A6C94005AEBF1 /* Assets.xcassets in Resources */,
 				5EAF633F1F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
 				5E8C22FF1F5A6C94005AEBF1 /* Main.storyboard in Resources */,
@@ -523,6 +537,7 @@
 			files = (
 				5E9334011F7390B800631C0F /* TImeTableViewController.xib in Resources */,
 				5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
+				5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +650,7 @@
 			files = (
 				5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */,
 				5EAF632B1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
+				5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
 				5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
 				5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
@@ -643,6 +659,7 @@
 				5E8C23231F5ADB46005AEBF1 /* OnAirSong.swift in Sources */,
 				5EAF63281F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */,
+				5EFFDE881F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5E8C22FC1F5A6C94005AEBF1 /* ViewController.swift in Sources */,
 				5E0241921F5CA7D2006C2DF4 /* StationLogoParser.swift in Sources */,
 				5EAF633C1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
@@ -668,6 +685,7 @@
 				5EAF632D1F6D2812005F74A4 /* Program.swift in Sources */,
 				5EAF63311F6D2821005F74A4 /* Feed.swift in Sources */,
 				5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
+				5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
 				5EFD3EEA1F76AC4E006BD744 /* TimeTablePagerViewModel.swift in Sources */,
 				5EAF63441F6D6FEF005F74A4 /* TestViewController.swift in Sources */,
 				5EAF633D1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
@@ -682,6 +700,7 @@
 				5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,
 				5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
 				5EAF63321F6D2826005F74A4 /* ProviderType.swift in Sources */,
+				5EFFDE891F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5EAF63261F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E9334041F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FF1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
@@ -873,7 +892,9 @@
 			baseConfigurationReference = 3E6B4E5649A82C8BAF16EC4F /* Pods-sugorokuon-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZJ43ZSA54N;
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tsuyoyo.sugorokuon-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -886,7 +907,9 @@
 			baseConfigurationReference = A02A0944456CAE26C0C55A82 /* Pods-sugorokuon-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZJ43ZSA54N;
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tsuyoyo.sugorokuon-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
