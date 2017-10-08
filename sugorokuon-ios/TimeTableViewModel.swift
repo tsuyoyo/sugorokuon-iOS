@@ -14,7 +14,6 @@ protocol TimeTableViewModelOutput {
 }
 
 class TimeTableViewModel {
-    fileprivate let disposeBag = DisposeBag()
     fileprivate let programs = BehaviorSubject<Array<Program>>(value: [])
     fileprivate let timeTable : TimeTable
     
@@ -26,6 +25,6 @@ class TimeTableViewModel {
 
 extension TimeTableViewModel : TimeTableViewModelOutput {
     var fetchedPrograms: Observable<Array<Program>> {
-        return programs.asObserver()
+        return programs.asObservable()
     }
 }

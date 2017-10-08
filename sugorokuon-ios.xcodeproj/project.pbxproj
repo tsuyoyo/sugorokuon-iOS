@@ -13,9 +13,18 @@
 		5E0241A01F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0241981F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E0241A71F5CCCED006C2DF4 /* Test02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0241A61F5CCCED006C2DF4 /* Test02.swift */; };
 		5E0241AB1F5CCD43006C2DF4 /* StationLogoParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */; };
+		5E0731491F87D7090086D0B1 /* ic_audiotrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0731461F87D7080086D0B1 /* ic_audiotrack.png */; };
+		5E07314A1F87D7090086D0B1 /* ic_audiotrack_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */; };
+		5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */; };
 		5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
 		5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
+		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
+		5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
+		5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6556671F80E04200647812 /* TimeTableApi.swift */; };
+		5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6556671F80E04200647812 /* TimeTableApi.swift */; };
+		5E65566C1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
+		5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
 		5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */; };
@@ -32,14 +41,14 @@
 		5E8C23281F5AE421005AEBF1 /* ProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C23271F5AE421005AEBF1 /* ProviderType.swift */; };
 		5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */; };
 		5E9333FF1F7390B800631C0F /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */; };
-		5E9334001F7390B800631C0F /* TImeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9333FD1F7390B800631C0F /* TImeTableViewController.xib */; };
-		5E9334011F7390B800631C0F /* TImeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9333FD1F7390B800631C0F /* TImeTableViewController.xib */; };
 		5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334021F73916400631C0F /* TimeTableRepository.swift */; };
 		5E9334041F73916400631C0F /* TimeTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334021F73916400631C0F /* TimeTableRepository.swift */; };
 		5E9334061F73927F00631C0F /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334051F73927F00631C0F /* Week.swift */; };
 		5E9334071F73927F00631C0F /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334051F73927F00631C0F /* Week.swift */; };
 		5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */; };
 		5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */; };
+		5E9761111F88E2260020EA80 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9761101F88E2260020EA80 /* SettingViewController.swift */; };
+		5E9761121F88E2260020EA80 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9761101F88E2260020EA80 /* SettingViewController.swift */; };
 		5EAF63221F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */; };
 		5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */; };
 		5EAF63251F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */; };
@@ -59,10 +68,18 @@
 		5EAF633D1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF633B1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift */; };
 		5EAF633F1F6D5F34005F74A4 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */; };
 		5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */; };
-		5EAF63431F6D6FEF005F74A4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63421F6D6FEF005F74A4 /* TestViewController.swift */; };
-		5EAF63441F6D6FEF005F74A4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63421F6D6FEF005F74A4 /* TestViewController.swift */; };
 		5EB012C71F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */; };
 		5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */; };
+		5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
+		5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
+		5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */; };
+		5ECD42B91F830CC50071DA94 /* OnAirSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */; };
+		5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */; };
+		5ECD42BC1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */; };
+		5ED703741F7E7A5C00A04685 /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703731F7E7A5C00A04685 /* FeedApi.swift */; };
+		5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703731F7E7A5C00A04685 /* FeedApi.swift */; };
+		5ED703781F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
+		5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
 		5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */; };
 		5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
 		5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
@@ -134,8 +151,14 @@
 		5E0241981F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SugorokuonPlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0241A61F5CCCED006C2DF4 /* Test02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test02.swift; sourceTree = "<group>"; };
 		5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationLogoParserTest.swift; sourceTree = "<group>"; };
+		5E0731461F87D7080086D0B1 /* ic_audiotrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack.png; sourceTree = "<group>"; };
+		5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_3x.png; sourceTree = "<group>"; };
+		5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_2x.png; sourceTree = "<group>"; };
 		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
+		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
+		5E6556671F80E04200647812 /* TimeTableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableApi.swift; sourceTree = "<group>"; };
+		5E65566B1F811A4000647812 /* NowOnAirParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowOnAirParser.swift; sourceTree = "<group>"; };
 		5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationResponseParser.swift; sourceTree = "<group>"; };
 		5E8C22F61F5A6C94005AEBF1 /* sugorokuon-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugorokuon-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +170,7 @@
 		5E8C230A1F5A6C94005AEBF1 /* sugorokuon-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sugorokuon-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8C230E1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sugorokuon_iosTests.swift; sourceTree = "<group>"; };
 		5E8C23101F5A6C94005AEBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E8C23191F5A6F19005AEBF1 /* SugorokuonPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SugorokuonPlayground.playground; sourceTree = "<group>"; };
+		5E8C23191F5A6F19005AEBF1 /* SugorokuonPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SugorokuonPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5E8C231C1F5ADA84005AEBF1 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		5E8C231E1F5ADAE2005AEBF1 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5E8C23201F5ADAF5005AEBF1 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
@@ -155,18 +178,22 @@
 		5E8C23251F5ADB63005AEBF1 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		5E8C23271F5AE421005AEBF1 /* ProviderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderType.swift; sourceTree = "<group>"; };
 		5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
-		5E9333FD1F7390B800631C0F /* TImeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TImeTableViewController.xib; sourceTree = "<group>"; };
 		5E9334021F73916400631C0F /* TimeTableRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableRepository.swift; sourceTree = "<group>"; };
 		5E9334051F73927F00631C0F /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewModel.swift; sourceTree = "<group>"; };
+		5E9761101F88E2260020EA80 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTimeTableParser.swift; sourceTree = "<group>"; };
 		5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyTimeTableParser.swift; sourceTree = "<group>"; };
 		5EAF63271F6D251E005F74A4 /* TimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableParser.swift; sourceTree = "<group>"; };
 		5EAF632A1F6D25A1005F74A4 /* ProgreamParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgreamParser.swift; sourceTree = "<group>"; };
 		5EAF633B1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewController.swift; sourceTree = "<group>"; };
 		5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
-		5EAF63421F6D6FEF005F74A4 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDescriptionViewController.swift; sourceTree = "<group>"; };
+		5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewController.swift; sourceTree = "<group>"; };
+		5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewController.swift; sourceTree = "<group>"; };
+		5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewModel.swift; sourceTree = "<group>"; };
+		5ED703731F7E7A5C00A04685 /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
+		5ED703771F7E7B2800A04685 /* StationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationApi.swift; sourceTree = "<group>"; };
 		5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewModel.swift; sourceTree = "<group>"; };
 		5EFD3EE41F769D78006BD744 /* UrlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
 		5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateSelect.storyboard; sourceTree = "<group>"; };
@@ -233,9 +260,20 @@
 			name = Parser;
 			sourceTree = "<group>";
 		};
+		5E07314E1F87D7640086D0B1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */,
+				5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */,
+				5E0731461F87D7080086D0B1 /* ic_audiotrack.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		5E21DB2B1F5BD7370042A023 /* Radiko */ = {
 			isa = PBXGroup;
 			children = (
+				5ED703761F7E7A6200A04685 /* Api */,
 				5E21DB2C1F5BD73E0042A023 /* Parser */,
 				5EFD3EE41F769D78006BD744 /* UrlManager.swift */,
 			);
@@ -253,6 +291,7 @@
 				5EAF632A1F6D25A1005F74A4 /* ProgreamParser.swift */,
 				5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */,
 				5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */,
+				5E65566B1F811A4000647812 /* NowOnAirParser.swift */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -282,6 +321,7 @@
 		5E8C22F81F5A6C94005AEBF1 /* sugorokuon-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5E07314E1F87D7640086D0B1 /* images */,
 				5E21DB2B1F5BD7370042A023 /* Radiko */,
 				5E8C231B1F5ADA11005AEBF1 /* App */,
 				5E8C231A1F5ADA08005AEBF1 /* Model */,
@@ -336,13 +376,11 @@
 			isa = PBXGroup;
 			children = (
 				5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */,
-				5E9333FD1F7390B800631C0F /* TImeTableViewController.xib */,
 				5EAF633B1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift */,
 				5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */,
 				5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */,
 				5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */,
 				5E9334021F73916400631C0F /* TimeTableRepository.swift */,
-				5EAF63421F6D6FEF005F74A4 /* TestViewController.swift */,
 				5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */,
 				5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */,
 				5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */,
@@ -353,6 +391,10 @@
 		5EAF63371F6D5AD1005F74A4 /* OnAIrSong */ = {
 			isa = PBXGroup;
 			children = (
+				5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */,
+				5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */,
+				5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */,
+				5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */,
 			);
 			name = OnAIrSong;
 			sourceTree = "<group>";
@@ -360,6 +402,7 @@
 		5EAF63381F6D5ADA005F74A4 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				5E9761101F88E2260020EA80 /* SettingViewController.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -369,6 +412,16 @@
 			children = (
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		5ED703761F7E7A6200A04685 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5ED703731F7E7A5C00A04685 /* FeedApi.swift */,
+				5ED703771F7E7B2800A04685 /* StationApi.swift */,
+				5E6556671F80E04200647812 /* TimeTableApi.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 		5EFD3EE71F76A215006BD744 /* Const */ = {
@@ -523,8 +576,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8C23041F5A6C94005AEBF1 /* LaunchScreen.storyboard in Resources */,
-				5E9334001F7390B800631C0F /* TImeTableViewController.xib in Resources */,
 				5EFFDE851F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
+				5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */,
+				5E07314A1F87D7090086D0B1 /* ic_audiotrack_3x.png in Resources */,
+				5E0731491F87D7090086D0B1 /* ic_audiotrack.png in Resources */,
 				5E8C23011F5A6C94005AEBF1 /* Assets.xcassets in Resources */,
 				5EAF633F1F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
 				5E8C22FF1F5A6C94005AEBF1 /* Main.storyboard in Resources */,
@@ -535,7 +590,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9334011F7390B800631C0F /* TImeTableViewController.xib in Resources */,
 				5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
 				5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
 			);
@@ -650,14 +704,18 @@
 			files = (
 				5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */,
 				5EAF632B1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
+				5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */,
+				5ED703741F7E7A5C00A04685 /* FeedApi.swift in Sources */,
 				5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
+				5E9761111F88E2260020EA80 /* SettingViewController.swift in Sources */,
 				5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
 				5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
+				5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */,
-				5EAF63431F6D6FEF005F74A4 /* TestViewController.swift in Sources */,
 				5E8C23231F5ADB46005AEBF1 /* OnAirSong.swift in Sources */,
 				5EAF63281F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
+				5E65566C1F811A4000647812 /* NowOnAirParser.swift in Sources */,
 				5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */,
 				5EFFDE881F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5E8C22FC1F5A6C94005AEBF1 /* ViewController.swift in Sources */,
@@ -665,14 +723,18 @@
 				5EAF633C1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
 				5E02418F1F5C2CA3006C2DF4 /* StationLogo.swift in Sources */,
 				5EB012C71F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
+				5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */,
 				5E8C23281F5AE421005AEBF1 /* ProviderType.swift in Sources */,
 				5EAF63221F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,
+				5ED703781F7E7B2800A04685 /* StationApi.swift in Sources */,
 				5E8C23211F5ADAF5005AEBF1 /* TimeTable.swift in Sources */,
 				5EAF63251F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E8C23261F5ADB63005AEBF1 /* Feed.swift in Sources */,
 				5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */,
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
+				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
+				5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */,
 				5E8C231D1F5ADA84005AEBF1 /* Program.swift in Sources */,
 				5E9334061F73927F00631C0F /* Week.swift in Sources */,
 			);
@@ -683,23 +745,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EAF632D1F6D2812005F74A4 /* Program.swift in Sources */,
+				5ECD42BC1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
+				5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */,
+				5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EAF63311F6D2821005F74A4 /* Feed.swift in Sources */,
 				5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
 				5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
 				5EFD3EEA1F76AC4E006BD744 /* TimeTablePagerViewModel.swift in Sources */,
-				5EAF63441F6D6FEF005F74A4 /* TestViewController.swift in Sources */,
 				5EAF633D1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
+				5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */,
 				5EAF632F1F6D281A005F74A4 /* TimeTable.swift in Sources */,
 				5EAF632E1F6D2815005F74A4 /* Station.swift in Sources */,
 				5EAF63291F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
+				5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */,
 				5EAF63301F6D281D005F74A4 /* OnAirSong.swift in Sources */,
 				5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E0241AB1F5CCD43006C2DF4 /* StationLogoParserTest.swift in Sources */,
+				5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */,
 				5EFD3EE81F76AC35006BD744 /* StationParser.swift in Sources */,
 				5E8C230F1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift in Sources */,
 				5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,
 				5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
 				5EAF63321F6D2826005F74A4 /* ProviderType.swift in Sources */,
+				5E9761121F88E2260020EA80 /* SettingViewController.swift in Sources */,
 				5EFFDE891F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5EAF63261F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E9334041F73916400631C0F /* TimeTableRepository.swift in Sources */,
@@ -707,8 +775,10 @@
 				5EFD3EE91F76AC3B006BD744 /* StationLogoParser.swift in Sources */,
 				5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */,
 				5EAF63331F6D282A005F74A4 /* StationLogo.swift in Sources */,
+				5ECD42B91F830CC50071DA94 /* OnAirSongViewController.swift in Sources */,
 				5E9334071F73927F00631C0F /* Week.swift in Sources */,
 				5EAF632C1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
+				5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */,
 				5E0241A71F5CCCED006C2DF4 /* Test02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,7 +905,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -879,7 +949,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

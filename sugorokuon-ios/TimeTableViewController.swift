@@ -11,15 +11,12 @@ import RxSwift
 import XLPagerTabStrip
 import SDWebImage
 
-import MaterialComponents.MaterialBottomSheet
-
 class TimeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
     
     private let disposeBag = DisposeBag()
-    
+
     private var viewModel : TimeTableViewModel!
-    private var station : Station!
-    
+    private var station : Station!    
     private var programs : Array<Program> = []
     
     @IBOutlet weak var table: UITableView!
@@ -63,6 +60,8 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         let title = table.viewWithTag(1) as! UILabel?
         let personalities = table.viewWithTag(2) as! UILabel?
         let image = table.viewWithTag(3) as! UIImageView?
+        let start = table.viewWithTag(4) as! UILabel?
+        let end = table.viewWithTag(5) as! UILabel?
         
         let p = programs[indexPath.row]
         title?.text = p.title
@@ -76,6 +75,12 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         } else if let stationImageUrl = station?.logoUrl {
             image?.sd_setImage(with: URL(string: stationImageUrl))
         }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        start?.text = dateFormatter.string(from: p.startTime)
+        end?.text = dateFormatter.string(from: p.endTime)
         
         return cell
     }

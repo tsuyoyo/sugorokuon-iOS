@@ -9,36 +9,96 @@
 import Foundation
 
 class OnAirSong {
+
+    let title: String
+    let artist: String
+    let onAirTime: Date
+    let image: String?
+    let amazon: String?
+    let iTunes: String?
+    let recochoku: String?
     
-    init(stationId: String,
+    init(title: String,
          artist: String,
-         title: String,
-         date: NSCalendar,
-         imageUrl: String,
+         onAirTime: Date,
+         image: String?,
          amazon: String?,
-         recochoku: String?
-        ) {
-        self.stationId = stationId
-        self.artist = artist
+         iTunes: String?,
+         recochoku: String?) {
         self.title = title
-        self.date = date
-        self.imageUrl = imageUrl
+        self.artist = artist
+        self.onAirTime = onAirTime
+        self.image = image
         self.amazon = amazon
+        self.iTunes = iTunes
         self.recochoku = recochoku
     }
     
-    let stationId: String
+    class Builder {
+        
+        enum BuildingError: Error {
+            case InsufficientValues
+        }
+        
+        var title: String?
+        var artist: String?
+        var onAirTime: Date?
+        var image: String?
+        var amazon: String?
+        var iTunes: String?
+        var recochoku: String?
+        
+        func title(title: String) -> Builder {
+            self.title = title
+            return self
+        }
+        
+        func artist(artist: String) -> Builder {
+            self.artist = artist
+            return self
+        }
+        
+        func onAirTime(onAirTime: Date) -> Builder {
+            self.onAirTime = onAirTime
+            return self
+        }
+        
+        func image(image: String) -> Builder {
+            self.image = image
+            return self
+        }
+        
+        func amazon(amazon: String) -> Builder {
+            self.amazon = amazon
+            return self
+        }
+        
+        func iTunes(iTunes: String) -> Builder {
+            self.iTunes = iTunes
+            return self
+        }
+        
+        func recochoku(recochoku: String) -> Builder {
+            self.recochoku = recochoku
+            return self
+        }
+        
+        func build() throws -> OnAirSong {
+            guard let _ = title, let _ = artist, let _ = onAirTime else {
+                throw BuildingError.InsufficientValues
+            }            
+            return OnAirSong(
+                title: title!,
+                artist: artist!,
+                onAirTime: onAirTime!,
+                image: image,
+                amazon: amazon,
+                iTunes: iTunes,
+                recochoku: recochoku)
+        }
+        
+    }
     
-    let artist: String
     
-    let title: String
-    
-    let date: NSCalendar
-    
-    let imageUrl: String
-    
-    let amazon: String?
-    
-    let recochoku: String?
     
 }

@@ -104,5 +104,5 @@ public class StationParser: NSObject, XMLParserDelegate {
             builder = builder.addLogo(logo: stationLogo)
         }
     }
-    
+
 }

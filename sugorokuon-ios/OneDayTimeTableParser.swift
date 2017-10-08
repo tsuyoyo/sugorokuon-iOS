@@ -17,7 +17,7 @@ class OneDayTimeTableParser: NSObject , XMLParserDelegate {
     private var parsingElement : String?
     
     private let disposeBag = DisposeBag()
-    private let parsedTimeTable = PublishSubject<Array<TimeTable>>()
+    private let parsedTimeTable = BehaviorSubject<Array<TimeTable>>(value: [])
     private var timeTableParser : TimeTableParser?
     
     private var timeTables = Array<TimeTable>()

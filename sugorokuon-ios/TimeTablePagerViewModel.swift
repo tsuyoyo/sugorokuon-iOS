@@ -22,17 +22,14 @@ protocol TimeTablePagerViewModelOutput {
     var fetchedStations : Observable<Array<Station>> { get }
     
     var fetchErrorSignal : Observable<String> { get }
+    
+    var isFetching : Observable<Bool> { get }
 }
 
 class TimeTablePagerViewModel {
-
-    fileprivate var stationParser : XMLParser!
-    fileprivate var stationResponseParser : StationResponseParser!
     
-    fileprivate var oneDayParser : XMLParser!
-    fileprivate var oneDayResponseParser : OneDayTimeTableParser!
-    
-    fileprivate let urlManager : UrlManager
+    fileprivate let stationApi : StationApi
+    fileprivate let timeTableApi : TimeTableApi
 
     fileprivate let disposeBag = DisposeBag()
     
@@ -40,64 +37,33 @@ class TimeTablePagerViewModel {
     fileprivate let timeTables = PublishSubject<Array<TimeTable>>()
     fileprivate let stations = PublishSubject<Array<Station>>()
     fileprivate let fetchError = PublishSubject<String>()
+    fileprivate let fetching = BehaviorSubject<Bool>(value: false)
     
-    init(urlManager: UrlManager) {
-        self.stationResponseParser = StationResponseParser()
-
-        self.oneDayResponseParser = OneDayTimeTableParser()
-        
-        self.urlManager = urlManager
+    init(stationApi: StationApi, timeTableApi: TimeTableApi) {
+        self.stationApi = stationApi
+        self.timeTableApi = timeTableApi
     }
 }
 
 extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
     
     func setAreaAndDate(region id: String, date: Date) {
-        fetchStations(region: id)
-        fetchTimeTable(region: id, date: date)
-        self.date.onNext(date)
-    }
-    
-    private func fetchStations(region id : String) {
-        let stationListUrl = URL(string: urlManager.stationList(region: id))
-        stationParser = XMLParser(contentsOf: stationListUrl!)
-        stationResponseParser = StationResponseParser()
-        stationParser?.delegate = stationResponseParser
-        
-        stationResponseParser.parsedStations()
-            .subscribe(onNext: { stations in
-                self.stations.onNext(stations)
-            },
-            onError: { error in
+        fetching.onNext(true)
+        Observable
+            .zip(stationApi.fetchStations(region: id),
+                 timeTableApi.fetchTimeTable(region: id, date: date)){
+                    (stations, timeTables) in
+                    self.stations.onNext(stations)
+                    self.timeTables.onNext(timeTables)
+                    self.fetching.onNext(false)
+                    self.date.onNext(date)
+            }
+            .do(onError: { error in
+                self.fetching.onNext(false)
                 self.fetchError.onNext(error.localizedDescription)
             })
+            .subscribe()
             .addDisposableTo(disposeBag)
-
-        self.stationParser?.parse()
-    }
-    
-    private func fetchTimeTable(region id : String, date : Date) {
-        let calendar = Calendar(identifier: .gregorian)
-        let timeTableUrl = URL(string: urlManager.timeTable(
-            year: calendar.component(.year, from: date),
-            month: calendar.component(.month, from: date),
-            day: calendar.component(.day, from: date),
-            region: id))
-        
-        oneDayParser = XMLParser(contentsOf: timeTableUrl!)
-        oneDayResponseParser = OneDayTimeTableParser()
-        oneDayParser?.delegate = oneDayResponseParser
-
-        oneDayResponseParser.observeTodayTimeTableParsed()
-            .subscribe(onNext: { timeTables in
-                self.timeTables.onNext(timeTables)
-            },
-            onError: { error in
-                self.fetchError.onNext(error.localizedDescription)
-            })
-            .addDisposableTo(disposeBag)
-        
-        oneDayParser?.parse()
     }
 }
 
@@ -116,5 +82,9 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelOutput {
     
     var fetchErrorSignal: Observable<String> {
         return self.fetchError.asObserver()
+    }
+    
+    var isFetching: Observable<Bool> {
+        return self.fetching.asObservable()
     }
 }

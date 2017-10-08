@@ -15,6 +15,7 @@ class ProgramDescriptionViewController: UIViewController {
         "<head><style>" +
             "body { " +
             "  font-size: 12pt;" +
+            "  font-family: sans-serif;" +
             "}" +
             "</style></head>"
 
@@ -98,7 +99,11 @@ extension ProgramDescriptionViewController : UIWebViewDelegate {
 //            print("scheme - \(url.scheme)")
             
             if url.scheme! == "mailto" {
-                UIApplication.shared.openURL(url)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
             } else {
                 let safariViewController = SFSafariViewController(url: url)
                 present(safariViewController, animated: true, completion: nil)

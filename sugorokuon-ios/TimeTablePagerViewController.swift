@@ -13,8 +13,8 @@ import RxSwift
 // https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9 を参考に
 class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSelectorViewControllerDelegate {
 
-    let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
-    
+    let purpleInspireColor = UIColor(red:3/255, green:155/255, blue:229/255, alpha:1.0)
+
     private var disposeBag = DisposeBag()
     private var viewModel : TimeTablePagerViewModel!
     
@@ -87,13 +87,15 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSe
     }
     
     private func setupTabBar() {
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.buttonBarBackgroundColor = UIColor(red: 73/255, green: 72/255, blue: 62/255, alpha: 1)
+        
+        settings.style.buttonBarBackgroundColor = UIColor(red: 225/255, green: 245/255, blue: 254/255, alpha: 1.0)
+        settings.style.buttonBarItemBackgroundColor = UIColor(red: 0xE1, green: 0xF5, blue: 0xFE, alpha: 1.0)
         settings.style.selectedBarBackgroundColor = purpleInspireColor
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = .black
+        settings.style.buttonBarItemTitleColor = .red
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
@@ -105,7 +107,10 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSe
     }
     
     private func bindViewModel() {
-        viewModel = TimeTablePagerViewModel(urlManager: urlManager)
+        viewModel = TimeTablePagerViewModel(
+            stationApi: StationApi(urlManager: urlManager),
+            timeTableApi: TimeTableApi(urlManager: urlManager)
+        )
         
         Observable.combineLatest(
             viewModel.fetchedStations,
@@ -122,6 +127,14 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSe
         viewModel.selectedDate
             .subscribeOn(MainScheduler.instance)
             .do(onNext: self.setTitle)
+            .subscribe()
+            .addDisposableTo(disposeBag)
+        
+        viewModel.isFetching
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { fetching in
+//                self.loading.isHidden = !fetching
+            })
             .subscribe()
             .addDisposableTo(disposeBag)
     }

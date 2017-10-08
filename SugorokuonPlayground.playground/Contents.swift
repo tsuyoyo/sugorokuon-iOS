@@ -927,13 +927,13 @@ class ProgramParser: NSObject, XMLParserDelegate {
 //programParser?.parse()
 
 
-var weeklyParser : XMLParser? = XMLParser(contentsOf: URL(string: "http://radiko.jp/v2/api/program/station/weekly?station_id=TBS")!)
-
-var weeklyParserDelegate = WeeklyTimeTableParser()
-weeklyParser!.delegate = weeklyParserDelegate
-
-weeklyParser?.parse()
-
+//var weeklyParser : XMLParser? = XMLParser(contentsOf: URL(string: "http://radiko.jp/v2/api/program/station/weekly?station_id=TBS")!)
+//
+//var weeklyParserDelegate = WeeklyTimeTableParser()
+//weeklyParser!.delegate = weeklyParserDelegate
+//
+//weeklyParser?.parse()
+//
 
 
 
@@ -957,6 +957,11 @@ weeklyParser?.parse()
 //    print($0.title)
 //}
 
+
+print("aaa")
+
+let nowOnAirParser = XMLParser(contentsOf: URL(string: "http://radiko.jp/v3/feed/pc/noa/TBS.xml")!)!
+let res = nowOnAirParser.parse()
 
 
 

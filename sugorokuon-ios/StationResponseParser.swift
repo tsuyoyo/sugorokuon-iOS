@@ -11,13 +11,21 @@ import RxSwift
 
 class StationResponseParser: NSObject, XMLParserDelegate {
     
+    private let urlManager : UrlManager
     private let disposeBag = DisposeBag()
     private var stations = Array<Station>()
     private var stationParser: StationParser?
-    private let parsedResult: PublishSubject<Array<Station>> = PublishSubject<Array<Station>>()
+    private let parsedResult: BehaviorSubject<Array<Station>> = BehaviorSubject<Array<Station>>(value: [])
+    
+    init(urlManager : UrlManager) {
+        self.urlManager = urlManager
+    }
     
     public func parsedStations() -> Observable<Array<Station>> {
         return parsedResult.asObserver()
+            .filter({ stations -> Bool in
+                return !stations.isEmpty
+            })
     }
     
     public func parser(_ parser: XMLParser,

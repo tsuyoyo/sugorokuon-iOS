@@ -9,7 +9,6 @@ target 'sugorokuon-ios' do
     pod 'RxCocoa',    '~> 3.0'
     pod 'XLPagerTabStrip', '~> 7.0'
     pod 'SDWebImage', '~> 4.0'
-    pod 'MaterialComponents/BottomSheet'
 
   # Pods for sugorokuon-ios
 
