@@ -9,6 +9,7 @@ target 'sugorokuon-ios' do
     pod 'RxCocoa',    '~> 3.0'
     pod 'XLPagerTabStrip', '~> 7.0'
     pod 'SDWebImage', '~> 4.0'
+    pod 'Google-Mobile-Ads-SDK'
 
   # Pods for sugorokuon-ios
 

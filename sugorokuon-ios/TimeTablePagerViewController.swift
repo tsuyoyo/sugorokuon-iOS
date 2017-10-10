@@ -27,32 +27,49 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSe
     private let repository = TimeTableRepository()
     private let urlManager = UrlManager()
     
+    private var titleLabel : UILabel!
+    
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         // Have to call before viewDidLoad()
         setupTabBar()
         super.viewDidLoad()
+        setupNavigationTitle()
         bindViewModel()
         viewModel.setAreaAndDate(region: "JP13", date: Date())
     }
     
-    @IBAction func onDateSelectClicked(_ sender: Any) {
-        let datePicker = UIStoryboard(name: "DateSelect", bundle: nil)
-            .instantiateViewController(withIdentifier: "dateSelect")
-            as! DateSelectViewController
+    private func setupNavigationTitle() {
+        titleLabel = UILabel()
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        let gestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(TimeTablePagerViewController.onTitleTapped(sender:))
+        )
+        titleLabel.addGestureRecognizer(gestureRecognizer)
         
-        datePicker.modalPresentationStyle = .overCurrentContext
-        if let dateStr = self.navigationItem.title,
-            let currentDate = getDateFormatForTitle().date(from: dateStr) {
-            datePicker.set(date: currentDate)
-        }
-        
-        datePicker.delegate = self
-        present(datePicker, animated: true, completion: nil)
+        titleLabel.isUserInteractionEnabled = true
+        self.navigationItem.titleView = titleLabel
+    }
+    
+    @IBAction func onNextDayTapped(_ sender: Any) {
+        viewModel.fetchNextDay()
+    }
+
+    @IBAction func onPreviousDayTapped(_ sender: Any) {
+        viewModel.fetchPreviousDay()
+    }
+    
+    func onTitleTapped(sender: UITapGestureRecognizer) {
+        showDatePicker()
     }
     
     private func getDateFormatForTitle() -> DateFormatter {
         let formatter : DateFormatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.locale = Locale(identifier:"ja_JP")
+        formatter.dateFormat = "yyyy/MM/dd(E)"
         return formatter
     }
     
@@ -126,19 +143,40 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController, DateSe
         
         viewModel.selectedDate
             .subscribeOn(MainScheduler.instance)
-            .do(onNext: self.setTitle)
+            .do(onNext : { date in
+                self.titleLabel.text = self.getDateFormatForTitle().string(from: date)
+                self.titleLabel.sizeToFit()
+            })
             .subscribe()
             .addDisposableTo(disposeBag)
         
         viewModel.isFetching
             .observeOn(MainScheduler.instance)
             .do(onNext: { fetching in
-//                self.loading.isHidden = !fetching
+                self.loading.isHidden = !fetching
             })
             .subscribe()
             .addDisposableTo(disposeBag)
     }
     
+
+    private func showDatePicker() {
+        let datePicker = UIStoryboard(name: "DateSelect", bundle: nil)
+            .instantiateViewController(withIdentifier: "dateSelect")
+            as! DateSelectViewController
+        
+        datePicker.modalPresentationStyle = .overCurrentContext
+        if let dateStr = self.navigationItem.title,
+            let currentDate = getDateFormatForTitle().date(from: dateStr) {
+            datePicker.set(date: currentDate)
+        } else {
+            datePicker.set(date: Date())
+        }
+        
+        datePicker.delegate = self
+        present(datePicker, animated: true, completion: nil)
+    }
+        
     private func setTitle(date: Date) {
         self.navigationItem.title = getDateFormatForTitle().string(from: date)
     }

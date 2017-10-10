@@ -15,8 +15,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var table: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count : \(array.count)")
-        return 4 //array.count
+        return array.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,7 +28,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as UITableViewCell
         
-        print("index : \(indexPath.section) \(indexPath.row) - \(cell)")
         
         var label = cell.viewWithTag(1) as! UILabel?
         label?.text = "\(array[indexPath.row])"

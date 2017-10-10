@@ -18,9 +18,19 @@
 		5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */; };
 		5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
 		5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
+		5E188CF31F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
+		5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
 		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
+		5E54F1801F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */; };
+		5E54F1811F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */; };
+		5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */; };
+		5E54F1841F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */; };
+		5E54F1861F8CFEDE000ED5CA /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1851F8CFEDE000ED5CA /* Region.swift */; };
+		5E54F1871F8CFEDE000ED5CA /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1851F8CFEDE000ED5CA /* Region.swift */; };
+		5E54F1891F8CFFD8000ED5CA /* RegionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */; };
+		5E54F18A1F8CFFD8000ED5CA /* RegionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */; };
 		5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6556671F80E04200647812 /* TimeTableApi.swift */; };
 		5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6556671F80E04200647812 /* TimeTableApi.swift */; };
 		5E65566C1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
@@ -155,8 +165,13 @@
 		5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_3x.png; sourceTree = "<group>"; };
 		5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_2x.png; sourceTree = "<group>"; };
 		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
+		5E188CF21F8BA070004E2A32 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
+		5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListTableViewController.swift; sourceTree = "<group>"; };
+		5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewModel.swift; sourceTree = "<group>"; };
+		5E54F1851F8CFEDE000ED5CA /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfo.swift; sourceTree = "<group>"; };
 		5E6556671F80E04200647812 /* TimeTableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableApi.swift; sourceTree = "<group>"; };
 		5E65566B1F811A4000647812 /* NowOnAirParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowOnAirParser.swift; sourceTree = "<group>"; };
 		5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationResponseParser.swift; sourceTree = "<group>"; };
@@ -403,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				5E9761101F88E2260020EA80 /* SettingViewController.swift */,
+				5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */,
+				5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -428,6 +445,9 @@
 			isa = PBXGroup;
 			children = (
 				5E9334051F73927F00631C0F /* Week.swift */,
+				5E188CF21F8BA070004E2A32 /* Keys.swift */,
+				5E54F1851F8CFEDE000ED5CA /* Region.swift */,
+				5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */,
 			);
 			name = Const;
 			sourceTree = "<group>";
@@ -711,6 +731,7 @@
 				5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
 				5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
+				5E54F1801F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */,
 				5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */,
 				5E8C23231F5ADB46005AEBF1 /* OnAirSong.swift in Sources */,
@@ -719,6 +740,8 @@
 				5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */,
 				5EFFDE881F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5E8C22FC1F5A6C94005AEBF1 /* ViewController.swift in Sources */,
+				5E54F1861F8CFEDE000ED5CA /* Region.swift in Sources */,
+				5E54F1891F8CFFD8000ED5CA /* RegionInfo.swift in Sources */,
 				5E0241921F5CA7D2006C2DF4 /* StationLogoParser.swift in Sources */,
 				5EAF633C1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
 				5E02418F1F5C2CA3006C2DF4 /* StationLogo.swift in Sources */,
@@ -727,6 +750,7 @@
 				5E8C23281F5AE421005AEBF1 /* ProviderType.swift in Sources */,
 				5EAF63221F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,
 				5ED703781F7E7B2800A04685 /* StationApi.swift in Sources */,
+				5E188CF31F8BA070004E2A32 /* Keys.swift in Sources */,
 				5E8C23211F5ADAF5005AEBF1 /* TimeTable.swift in Sources */,
 				5EAF63251F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E8C23261F5ADB63005AEBF1 /* Feed.swift in Sources */,
@@ -734,6 +758,7 @@
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
 				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
+				5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */,
 				5E8C231D1F5ADA84005AEBF1 /* Program.swift in Sources */,
 				5E9334061F73927F00631C0F /* Week.swift in Sources */,
@@ -747,6 +772,7 @@
 				5EAF632D1F6D2812005F74A4 /* Program.swift in Sources */,
 				5ECD42BC1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */,
+				5E54F1871F8CFEDE000ED5CA /* Region.swift in Sources */,
 				5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EAF63311F6D2821005F74A4 /* Feed.swift in Sources */,
 				5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
@@ -758,6 +784,7 @@
 				5EAF632E1F6D2815005F74A4 /* Station.swift in Sources */,
 				5EAF63291F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */,
+				5E54F1841F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5EAF63301F6D281D005F74A4 /* OnAirSong.swift in Sources */,
 				5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E0241AB1F5CCD43006C2DF4 /* StationLogoParserTest.swift in Sources */,
@@ -771,6 +798,7 @@
 				5EFFDE891F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
 				5EAF63261F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E9334041F73916400631C0F /* TimeTableRepository.swift in Sources */,
+				5E54F18A1F8CFFD8000ED5CA /* RegionInfo.swift in Sources */,
 				5E9333FF1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
 				5EFD3EE91F76AC3B006BD744 /* StationLogoParser.swift in Sources */,
 				5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */,
@@ -778,8 +806,10 @@
 				5ECD42B91F830CC50071DA94 /* OnAirSongViewController.swift in Sources */,
 				5E9334071F73927F00631C0F /* Week.swift in Sources */,
 				5EAF632C1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
+				5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */,
 				5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */,
 				5E0241A71F5CCCED006C2DF4 /* Test02.swift in Sources */,
+				5E54F1811F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -94,8 +94,10 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         bottomSheet.modalPresentationStyle = .overCurrentContext
         bottomSheet.set(program: programs[indexPath.row])
         present(bottomSheet, animated: true, completion: nil)
+        
+        table.deselectRow(at: indexPath, animated: true)
     }
-    
+
     /*
     // MARK: - Navigation
 

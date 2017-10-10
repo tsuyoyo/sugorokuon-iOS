@@ -108,8 +108,6 @@ class OnAirSongViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ table: UITableView, didSelectRowAt indexPath: IndexPath) {
         let song = songs[indexPath.row]
         
-        print("tapped -- row : \(indexPath.row)  - title \(song.title))")
-        
         // When Japanese is included in urlStr, encode is required otherwise URL(...) returns nil
         let urlStr = "https://www.google.co.jp/search?q=\(song.artist)+\(song.title)"
         let encodedURL = urlStr.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)

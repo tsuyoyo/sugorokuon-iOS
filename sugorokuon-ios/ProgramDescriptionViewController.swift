@@ -8,8 +8,11 @@
 
 import UIKit
 import SafariServices
+import GoogleMobileAds
 
 class ProgramDescriptionViewController: UIViewController {
+    
+    @IBOutlet weak var admobBanner: GADBannerView!
     
     private let fontStyle =
         "<head><style>" +
@@ -28,7 +31,8 @@ class ProgramDescriptionViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var webView: UIWebView!
-
+    @IBOutlet weak var webSiteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +58,24 @@ class ProgramDescriptionViewController: UIViewController {
             firstDataLoading = true
             webView.delegate = self
         }
+        
+        setupAdMob()
+        
+        if (program?.url != nil && (program?.url!.isEmpty)!)
+            || program?.url == nil {
+            webSiteButton.isEnabled = false
+        }
+
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupAdMob() {
+        admobBanner.adUnitID = ADMOB_PUB_ID
+        admobBanner.rootViewController = self
+        // Simulator でのテスト。うまいやり方があるはず。
+        let gadRequest = GADRequest()
+        gadRequest.testDevices = [kGADSimulatorID]
+        admobBanner.load(gadRequest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +92,13 @@ class ProgramDescriptionViewController: UIViewController {
         dismiss(animated: true, completion: { () -> Void in
             print("closed")
         })
+    }
+    
+    @IBAction func onWebSiteSelected(_ sender: Any) {
+        if let webSite = program?.url {
+            let safariViewController = SFSafariViewController(url: URL(string: webSite)!)
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
 
     /*
