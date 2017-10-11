@@ -265,6 +265,7 @@
 				5E0241A91F5CCD2D006C2DF4 /* Parser */,
 			);
 			name = Radiko;
+			path = Radiko;
 			sourceTree = "<group>";
 		};
 		5E0241A91F5CCD2D006C2DF4 /* Parser */ = {
@@ -273,14 +274,15 @@
 				5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */,
 			);
 			name = Parser;
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		5E07314E1F87D7640086D0B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E0731461F87D7080086D0B1 /* ic_audiotrack.png */,
 				5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */,
 				5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */,
-				5E0731461F87D7080086D0B1 /* ic_audiotrack.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -293,33 +295,35 @@
 				5EFD3EE41F769D78006BD744 /* UrlManager.swift */,
 			);
 			name = Radiko;
+			path = Radiko;
 			sourceTree = "<group>";
 		};
 		5E21DB2C1F5BD73E0042A023 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				5E21DB2D1F5BD7E50042A023 /* StationParser.swift */,
+				5E65566B1F811A4000647812 /* NowOnAirParser.swift */,
+				5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */,
+				5EAF632A1F6D25A1005F74A4 /* ProgreamParser.swift */,
 				5E0241911F5CA7D2006C2DF4 /* StationLogoParser.swift */,
+				5E21DB2D1F5BD7E50042A023 /* StationParser.swift */,
+				5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */,
+				5EAF63271F6D251E005F74A4 /* TimeTableParser.swift */,
 				5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */,
 				5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */,
-				5EAF63271F6D251E005F74A4 /* TimeTableParser.swift */,
-				5EAF632A1F6D25A1005F74A4 /* ProgreamParser.swift */,
-				5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */,
-				5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */,
-				5E65566B1F811A4000647812 /* NowOnAirParser.swift */,
 			);
 			name = Parser;
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		5E8C22ED1F5A6C94005AEBF1 = {
 			isa = PBXGroup;
 			children = (
-				5E8C23191F5A6F19005AEBF1 /* SugorokuonPlayground.playground */,
+				B3845D384327B7341A538122 /* Frameworks */,
+				2489C76EFC150C00BD45B8C8 /* Pods */,
+				5E8C22F71F5A6C94005AEBF1 /* Products */,
 				5E8C22F81F5A6C94005AEBF1 /* sugorokuon-ios */,
 				5E8C230D1F5A6C94005AEBF1 /* sugorokuon-iosTests */,
-				5E8C22F71F5A6C94005AEBF1 /* Products */,
-				2489C76EFC150C00BD45B8C8 /* Pods */,
-				B3845D384327B7341A538122 /* Frameworks */,
+				5E8C23191F5A6F19005AEBF1 /* SugorokuonPlayground.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,16 +340,16 @@
 		5E8C22F81F5A6C94005AEBF1 /* sugorokuon-ios */ = {
 			isa = PBXGroup;
 			children = (
-				5E07314E1F87D7640086D0B1 /* images */,
-				5E21DB2B1F5BD7370042A023 /* Radiko */,
 				5E8C231B1F5ADA11005AEBF1 /* App */,
 				5E8C231A1F5ADA08005AEBF1 /* Model */,
+				5E21DB2B1F5BD7370042A023 /* Radiko */,
+				5E07314E1F87D7640086D0B1 /* images */,
 				5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */,
-				5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */,
-				5E8C22FD1F5A6C94005AEBF1 /* Main.storyboard */,
 				5E8C23001F5A6C94005AEBF1 /* Assets.xcassets */,
-				5E8C23021F5A6C94005AEBF1 /* LaunchScreen.storyboard */,
 				5E8C23051F5A6C94005AEBF1 /* Info.plist */,
+				5E8C23021F5A6C94005AEBF1 /* LaunchScreen.storyboard */,
+				5E8C22FD1F5A6C94005AEBF1 /* Main.storyboard */,
+				5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */,
 			);
 			path = "sugorokuon-ios";
 			sourceTree = "<group>";
@@ -354,9 +358,9 @@
 			isa = PBXGroup;
 			children = (
 				5E0241A81F5CCD27006C2DF4 /* Radiko */,
-				5E8C230E1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift */,
 				5E8C23101F5A6C94005AEBF1 /* Info.plist */,
 				5E0241A61F5CCCED006C2DF4 /* Test02.swift */,
+				5E8C230E1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift */,
 			);
 			path = "sugorokuon-iosTests";
 			sourceTree = "<group>";
@@ -364,15 +368,16 @@
 		5E8C231A1F5ADA08005AEBF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E8C231C1F5ADA84005AEBF1 /* Program.swift */,
-				5E8C231E1F5ADAE2005AEBF1 /* Station.swift */,
-				5E8C23201F5ADAF5005AEBF1 /* TimeTable.swift */,
-				5E8C23221F5ADB46005AEBF1 /* OnAirSong.swift */,
 				5E8C23251F5ADB63005AEBF1 /* Feed.swift */,
+				5E8C23221F5ADB46005AEBF1 /* OnAirSong.swift */,
+				5E8C231C1F5ADA84005AEBF1 /* Program.swift */,
 				5E8C23271F5AE421005AEBF1 /* ProviderType.swift */,
+				5E8C231E1F5ADAE2005AEBF1 /* Station.swift */,
 				5E02418E1F5C2CA3006C2DF4 /* StationLogo.swift */,
+				5E8C23201F5ADAF5005AEBF1 /* TimeTable.swift */,
 			);
 			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5E8C231B1F5ADA11005AEBF1 /* App */ = {
@@ -380,48 +385,52 @@
 			children = (
 				5EFD3EE71F76A215006BD744 /* Const */,
 				5EAF633A1F6D5E18005F74A4 /* Home */,
-				5EAF63381F6D5ADA005F74A4 /* Setting */,
 				5EAF63371F6D5AD1005F74A4 /* OnAIrSong */,
+				5EAF63381F6D5ADA005F74A4 /* Setting */,
 				5EAF63341F6D5AA4005F74A4 /* TimeTable */,
 			);
 			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
 		5EAF63341F6D5AA4005F74A4 /* TimeTable */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */,
+				5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */,
+				5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */,
 				5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */,
 				5EAF633B1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift */,
 				5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */,
+				5E9334021F73916400631C0F /* TimeTableRepository.swift */,
 				5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */,
 				5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */,
-				5E9334021F73916400631C0F /* TimeTableRepository.swift */,
-				5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */,
-				5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */,
-				5EFFDE871F7B287C00EC8839 /* DateSelectViewController.swift */,
 			);
 			name = TimeTable;
+			path = TimeTable;
 			sourceTree = "<group>";
 		};
 		5EAF63371F6D5AD1005F74A4 /* OnAIrSong */ = {
 			isa = PBXGroup;
 			children = (
-				5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */,
 				5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */,
+				5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */,
 				5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */,
 				5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */,
 			);
 			name = OnAIrSong;
+			path = OnAIrSong;
 			sourceTree = "<group>";
 		};
 		5EAF63381F6D5ADA005F74A4 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				5E9761101F88E2260020EA80 /* SettingViewController.swift */,
 				5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */,
 				5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */,
+				5E9761101F88E2260020EA80 /* SettingViewController.swift */,
 			);
 			name = Setting;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		5EAF633A1F6D5E18005F74A4 /* Home */ = {
@@ -429,6 +438,7 @@
 			children = (
 			);
 			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		5ED703761F7E7A6200A04685 /* Api */ = {
@@ -439,17 +449,19 @@
 				5E6556671F80E04200647812 /* TimeTableApi.swift */,
 			);
 			name = Api;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		5EFD3EE71F76A215006BD744 /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				5E9334051F73927F00631C0F /* Week.swift */,
 				5E188CF21F8BA070004E2A32 /* Keys.swift */,
 				5E54F1851F8CFEDE000ED5CA /* Region.swift */,
 				5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */,
+				5E9334051F73927F00631C0F /* Week.swift */,
 			);
 			name = Const;
+			path = Const;
 			sourceTree = "<group>";
 		};
 		B3845D384327B7341A538122 /* Frameworks */ = {
@@ -835,6 +847,7 @@
 				5E8C22FE1F5A6C94005AEBF1 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		5E8C23021F5A6C94005AEBF1 /* LaunchScreen.storyboard */ = {
@@ -843,6 +856,7 @@
 				5E8C23031F5A6C94005AEBF1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
