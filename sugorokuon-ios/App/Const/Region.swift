@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Region {
+enum Region : String {
     case HOKKAIDO
     case AOMORI
     case IWATE
@@ -56,6 +56,7 @@ enum Region {
     case MIYAZAKI
     case KAGOSHIMA
     case OKINAWA
+    case NO_REGION
 
     func value() -> (id : String, name : String) {
         switch self {
@@ -106,6 +107,59 @@ enum Region {
         case .MIYAZAKI: return (id: "JP45", name: "宮崎")
         case .KAGOSHIMA: return (id: "JP46", name: "鹿児島")
         case .OKINAWA: return (id: "JP47", name: "沖縄")
+        case .NO_REGION: return (id: "", name: "")
         }
+    }
+    
+    static func getAllRegion() -> Array<Region> {
+        return [
+            Region.HOKKAIDO,
+            Region.AOMORI,
+            Region.IWATE,
+            Region.MIYAAGI,
+            Region.AKITA,
+            Region.YAMAGATA,
+            Region.FUKUSHIMA,
+            Region.IBARAKI,
+            Region.TOCHIGI,
+            Region.GUNMA,
+            Region.SAITAMA,
+            Region.CHIBA,
+            Region.TOKYO,
+            Region.KANAGAWA,
+            Region.NIIGATA,
+            Region.TOYAMA,
+            Region.ISHIKAWA,
+            Region.FUKUI,
+            Region.YAMANASHI,
+            Region.NAGANO,
+            Region.GIFU,
+            Region.SHIZUOKA,
+            Region.AICHI,
+            Region.MIE,
+            Region.SHIGA,
+            Region.KYOTO,
+            Region.OSAKA,
+            Region.HYOGO,
+            Region.NARA,
+            Region.WAKAYAMA,
+            Region.TOTTORI,
+            Region.SHIMANE,
+            Region.OKAYAMA,
+            Region.HIROSHIMA,
+            Region.YAMAGUCHI,
+            Region.TOKUSHIMA,
+            Region.KAGAWA,
+            Region.EHIME,
+            Region.KOUCHI,
+            Region.FUKUOKA,
+            Region.SAGA,
+            Region.NAGASAKI,
+            Region.KUMAMOTO,
+            Region.OITA,
+            Region.MIYAZAKI,
+            Region.KAGOSHIMA,
+            Region.OKINAWA,
+        ]
     }
 }

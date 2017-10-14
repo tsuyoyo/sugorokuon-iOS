@@ -7,15 +7,47 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol RegionListViewModelInput {
-    
+    func select(region: Region)
 }
 
 protocol RegionListViewModelOutput {
-    
+    var regions : Observable<Array<Region>> { get }
+    func selectedRegion() -> Observable<Region>
 }
 
 class RegionListViewModel {
+    fileprivate let regionOptions = BehaviorSubject<Array<Region>>(value: Region.getAllRegion())
+    fileprivate let selectedRegionOption = BehaviorSubject<Region>(value: Region.NO_REGION)
     
+    fileprivate let repository : RegionRepository
+    private let disposeBag  = DisposeBag()
+    
+    init(repository : RegionRepository) {
+        self.repository = repository
+        self.repository.observeRegion()
+            .do(onNext: { region in
+                self.selectedRegionOption.onNext(region)
+            })
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
+}
+
+extension RegionListViewModel : RegionListViewModelInput {
+    func select(region: Region) {
+        repository.updateRegion(region: region)
+    }
+}
+
+extension RegionListViewModel : RegionListViewModelOutput {
+    var regions: Observable<Array<Region>> {
+        return regionOptions.asObservable()
+    }
+
+    func selectedRegion() -> Observable<Region> {
+        return repository.observeRegion()
+    }
 }

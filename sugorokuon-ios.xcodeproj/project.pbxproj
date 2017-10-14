@@ -23,8 +23,8 @@
 		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
-		5E54F1801F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */; };
-		5E54F1811F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */; };
+		5E54F1801F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
+		5E54F1811F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
 		5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */; };
 		5E54F1841F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */; };
 		5E54F1861F8CFEDE000ED5CA /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1851F8CFEDE000ED5CA /* Region.swift */; };
@@ -80,6 +80,8 @@
 		5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */; };
 		5EB012C71F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */; };
 		5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */; };
+		5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB581161F8D96D0001F5846 /* RegionRepository.swift */; };
+		5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB581161F8D96D0001F5846 /* RegionRepository.swift */; };
 		5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */; };
@@ -168,7 +170,7 @@
 		5E188CF21F8BA070004E2A32 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
-		5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListTableViewController.swift; sourceTree = "<group>"; };
+		5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
 		5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewModel.swift; sourceTree = "<group>"; };
 		5E54F1851F8CFEDE000ED5CA /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfo.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		5EAF633B1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewController.swift; sourceTree = "<group>"; };
 		5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDescriptionViewController.swift; sourceTree = "<group>"; };
+		5EB581161F8D96D0001F5846 /* RegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRepository.swift; sourceTree = "<group>"; };
 		5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewController.swift; sourceTree = "<group>"; };
 		5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewController.swift; sourceTree = "<group>"; };
 		5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewModel.swift; sourceTree = "<group>"; };
@@ -264,7 +267,6 @@
 			children = (
 				5E0241A91F5CCD2D006C2DF4 /* Parser */,
 			);
-			name = Radiko;
 			path = Radiko;
 			sourceTree = "<group>";
 		};
@@ -273,7 +275,6 @@
 			children = (
 				5E0241AA1F5CCD43006C2DF4 /* StationLogoParserTest.swift */,
 			);
-			name = Parser;
 			path = Parser;
 			sourceTree = "<group>";
 		};
@@ -294,7 +295,6 @@
 				5E21DB2C1F5BD73E0042A023 /* Parser */,
 				5EFD3EE41F769D78006BD744 /* UrlManager.swift */,
 			);
-			name = Radiko;
 			path = Radiko;
 			sourceTree = "<group>";
 		};
@@ -311,7 +311,6 @@
 				5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */,
 				5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */,
 			);
-			name = Parser;
 			path = Parser;
 			sourceTree = "<group>";
 		};
@@ -376,7 +375,6 @@
 				5E02418E1F5C2CA3006C2DF4 /* StationLogo.swift */,
 				5E8C23201F5ADAF5005AEBF1 /* TimeTable.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -389,7 +387,6 @@
 				5EAF63381F6D5ADA005F74A4 /* Setting */,
 				5EAF63341F6D5AA4005F74A4 /* TimeTable */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -406,7 +403,6 @@
 				5E9333FC1F7390B800631C0F /* TimeTableViewController.swift */,
 				5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */,
 			);
-			name = TimeTable;
 			path = TimeTable;
 			sourceTree = "<group>";
 		};
@@ -418,18 +414,17 @@
 				5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */,
 				5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */,
 			);
-			name = OnAIrSong;
 			path = OnAIrSong;
 			sourceTree = "<group>";
 		};
 		5EAF63381F6D5ADA005F74A4 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				5E54F17F1F8CFE5E000ED5CA /* RegionListTableViewController.swift */,
+				5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */,
 				5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */,
 				5E9761101F88E2260020EA80 /* SettingViewController.swift */,
+				5EB581161F8D96D0001F5846 /* RegionRepository.swift */,
 			);
-			name = Setting;
 			path = Setting;
 			sourceTree = "<group>";
 		};
@@ -437,7 +432,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -448,7 +442,6 @@
 				5ED703771F7E7B2800A04685 /* StationApi.swift */,
 				5E6556671F80E04200647812 /* TimeTableApi.swift */,
 			);
-			name = Api;
 			path = Api;
 			sourceTree = "<group>";
 		};
@@ -460,7 +453,6 @@
 				5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */,
 				5E9334051F73927F00631C0F /* Week.swift */,
 			);
-			name = Const;
 			path = Const;
 			sourceTree = "<group>";
 		};
@@ -743,7 +735,7 @@
 				5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
 				5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
-				5E54F1801F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */,
+				5E54F1801F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */,
 				5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */,
 				5E8C23231F5ADB46005AEBF1 /* OnAirSong.swift in Sources */,
@@ -769,6 +761,7 @@
 				5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */,
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
 				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
+				5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */,
@@ -796,6 +789,7 @@
 				5EAF632E1F6D2815005F74A4 /* Station.swift in Sources */,
 				5EAF63291F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */,
+				5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */,
 				5E54F1841F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5EAF63301F6D281D005F74A4 /* OnAirSong.swift in Sources */,
 				5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
@@ -821,7 +815,7 @@
 				5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */,
 				5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */,
 				5E0241A71F5CCCED006C2DF4 /* Test02.swift in Sources */,
-				5E54F1811F8CFE5E000ED5CA /* RegionListTableViewController.swift in Sources */,
+				5E54F1811F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
