@@ -37,6 +37,8 @@
 		5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
 		5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
+		5E8234D31F94EE0F00486124 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */; };
+		5E8234D41F94EE0F00486124 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */; };
 		5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */; };
 		5E8C22FC1F5A6C94005AEBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */; };
 		5E8C22FF1F5A6C94005AEBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8C22FD1F5A6C94005AEBF1 /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */; };
 		5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB581161F8D96D0001F5846 /* RegionRepository.swift */; };
 		5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB581161F8D96D0001F5846 /* RegionRepository.swift */; };
+		5EB5972B1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */; };
+		5EB5972C1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */; };
 		5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */; };
@@ -177,6 +181,7 @@
 		5E6556671F80E04200647812 /* TimeTableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableApi.swift; sourceTree = "<group>"; };
 		5E65566B1F811A4000647812 /* NowOnAirParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowOnAirParser.swift; sourceTree = "<group>"; };
 		5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationResponseParser.swift; sourceTree = "<group>"; };
+		5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		5E8C22F61F5A6C94005AEBF1 /* sugorokuon-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugorokuon-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +212,7 @@
 		5EAF633E1F6D5F34005F74A4 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDescriptionViewController.swift; sourceTree = "<group>"; };
 		5EB581161F8D96D0001F5846 /* RegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRepository.swift; sourceTree = "<group>"; };
+		5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewModel.swift; sourceTree = "<group>"; };
 		5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewController.swift; sourceTree = "<group>"; };
 		5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewController.swift; sourceTree = "<group>"; };
 		5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewModel.swift; sourceTree = "<group>"; };
@@ -381,6 +387,7 @@
 		5E8C231B1F5ADA11005AEBF1 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5EB597291F978B0F00EF9AF7 /* Introduction */,
 				5EFD3EE71F76A215006BD744 /* Const */,
 				5EAF633A1F6D5E18005F74A4 /* Home */,
 				5EAF63371F6D5AD1005F74A4 /* OnAIrSong */,
@@ -433,6 +440,15 @@
 			children = (
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5EB597291F978B0F00EF9AF7 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */,
+				5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */,
+			);
+			path = Introduction;
 			sourceTree = "<group>";
 		};
 		5ED703761F7E7A6200A04685 /* Api */ = {
@@ -739,6 +755,7 @@
 				5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */,
 				5E8C23231F5ADB46005AEBF1 /* OnAirSong.swift in Sources */,
+				5EB5972B1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */,
 				5EAF63281F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5E65566C1F811A4000647812 /* NowOnAirParser.swift in Sources */,
 				5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */,
@@ -762,6 +779,7 @@
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
 				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */,
+				5E8234D31F94EE0F00486124 /* IntroductionViewController.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */,
@@ -778,6 +796,7 @@
 				5ECD42BC1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */,
 				5E54F1871F8CFEDE000ED5CA /* Region.swift in Sources */,
+				5EB5972C1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */,
 				5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EAF63311F6D2821005F74A4 /* Feed.swift in Sources */,
 				5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
@@ -795,6 +814,7 @@
 				5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E0241AB1F5CCD43006C2DF4 /* StationLogoParserTest.swift in Sources */,
 				5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */,
+				5E8234D41F94EE0F00486124 /* IntroductionViewController.swift in Sources */,
 				5EFD3EE81F76AC35006BD744 /* StationParser.swift in Sources */,
 				5E8C230F1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift in Sources */,
 				5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,

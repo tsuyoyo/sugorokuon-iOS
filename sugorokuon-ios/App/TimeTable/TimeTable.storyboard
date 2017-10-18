@@ -10,6 +10,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Introduction View Controller-->
+        <scene sceneID="GMP-jG-w9A">
+            <objects>
+                <viewController storyboardIdentifier="introduction" id="qnp-1V-XNd" customClass="IntroductionViewController" customModule="sugorokuon_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xlD-IT-hOk"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpU-C7-pAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTF-Zy-6tt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wh9-pF-A8t">
+                                <rect key="frame" x="16" y="312" width="343" height="298"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="298" id="W1v-vc-B3l"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="initRegionCell" id="ZF9-Bd-PgP">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZF9-Bd-PgP" id="9ZX-wv-TKB">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="東京都" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-vJ-S3t">
+                                                    <rect key="frame" x="24" y="11" width="298" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GOx-vJ-S3t" firstAttribute="leading" secondItem="9ZX-wv-TKB" secondAttribute="leadingMargin" constant="16" id="G6O-Rk-sWk"/>
+                                                <constraint firstItem="GOx-vJ-S3t" firstAttribute="centerY" secondItem="9ZX-wv-TKB" secondAttribute="centerY" id="ICn-CE-jpQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qnp-1V-XNd" id="c8h-FT-Que"/>
+                                    <outlet property="delegate" destination="qnp-1V-XNd" id="bfv-F4-TbB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOD-6y-mwI">
+                                <rect key="frame" x="52" y="635" width="271" height="8"/>
+                                <state key="normal" title="ラジコンシェルジュをはじめる"/>
+                                <connections>
+                                    <action selector="onCloseTapped:" destination="qnp-1V-XNd" eventType="touchUpInside" id="rGa-Lt-9j1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-wj-ILn">
+                                <rect key="frame" x="43" y="68" width="290" height="62.5"/>
+                                <string key="text">はじめましてラジコンシェルジュです</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="このアプリでは、手軽に全国のラジオ番組表やOnAirされた曲を見ることができます。まずはアナタのお住いの地域を選択してください。地域は、設定からいつでも変更することができます。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23b-LB-BK9">
+                                <rect key="frame" x="24" y="154.5" width="327" height="132.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="23b-LB-BK9" firstAttribute="top" secondItem="Bxo-wj-ILn" secondAttribute="bottom" constant="24" id="2ey-Qb-BmX"/>
+                            <constraint firstItem="Wh9-pF-A8t" firstAttribute="leading" secondItem="UTF-Zy-6tt" secondAttribute="leadingMargin" id="3q1-K5-Uwc"/>
+                            <constraint firstItem="Wh9-pF-A8t" firstAttribute="top" secondItem="xlD-IT-hOk" secondAttribute="bottom" constant="292" id="HFJ-Ju-yLr"/>
+                            <constraint firstItem="bOD-6y-mwI" firstAttribute="leading" secondItem="UTF-Zy-6tt" secondAttribute="leadingMargin" constant="36" id="HcO-pz-Emf"/>
+                            <constraint firstItem="bOD-6y-mwI" firstAttribute="top" secondItem="Wh9-pF-A8t" secondAttribute="bottom" constant="25" id="Hrd-lU-wkY"/>
+                            <constraint firstItem="Wh9-pF-A8t" firstAttribute="centerX" secondItem="UTF-Zy-6tt" secondAttribute="centerX" id="LDa-0s-ssu"/>
+                            <constraint firstItem="23b-LB-BK9" firstAttribute="centerX" secondItem="UTF-Zy-6tt" secondAttribute="centerX" id="W6q-oP-KBo"/>
+                            <constraint firstItem="Bxo-wj-ILn" firstAttribute="centerX" secondItem="UTF-Zy-6tt" secondAttribute="centerX" id="ZNp-Gs-PSL"/>
+                            <constraint firstItem="Wh9-pF-A8t" firstAttribute="top" secondItem="23b-LB-BK9" secondAttribute="bottom" constant="25" id="aTq-IV-e5D"/>
+                            <constraint firstItem="bOD-6y-mwI" firstAttribute="top" secondItem="Wh9-pF-A8t" secondAttribute="bottom" constant="25" id="bD8-QL-qie"/>
+                            <constraint firstItem="23b-LB-BK9" firstAttribute="leading" secondItem="UTF-Zy-6tt" secondAttribute="leading" constant="24" id="d0y-CJ-28B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOD-6y-mwI" secondAttribute="trailing" constant="36" id="e8m-Pn-ReC"/>
+                            <constraint firstItem="Wh9-pF-A8t" firstAttribute="trailing" secondItem="UTF-Zy-6tt" secondAttribute="trailingMargin" id="ecg-vW-m2j"/>
+                            <constraint firstItem="Bxo-wj-ILn" firstAttribute="top" secondItem="xlD-IT-hOk" secondAttribute="bottom" constant="48" id="jfs-Ko-zkM"/>
+                            <constraint firstItem="bOD-6y-mwI" firstAttribute="centerX" secondItem="UTF-Zy-6tt" secondAttribute="centerX" id="tnL-o4-6EB"/>
+                            <constraint firstItem="kpU-C7-pAA" firstAttribute="top" secondItem="bOD-6y-mwI" secondAttribute="bottom" constant="24" id="xvh-ZT-9fd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="bOD-6y-mwI" id="ZEU-sF-l7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Sj-JD-kXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1874.4000000000001" y="-1244.527736131934"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="COr-O5-mbe">
             <objects>
@@ -445,6 +539,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3028681506849315" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eUa-tr-AaR" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="4Ad-AI-ZqH"/>
                             <constraint firstAttribute="trailing" secondItem="pW7-xy-aKD" secondAttribute="trailing" id="96c-cm-PAO"/>

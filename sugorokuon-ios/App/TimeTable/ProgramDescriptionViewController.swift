@@ -99,18 +99,7 @@ class ProgramDescriptionViewController: UIViewController {
             let safariViewController = SFSafariViewController(url: URL(string: webSite)!)
             present(safariViewController, animated: true, completion: nil)
         }
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
+    }    
 }
 
 extension ProgramDescriptionViewController : UIWebViewDelegate {
@@ -122,10 +111,8 @@ extension ProgramDescriptionViewController : UIWebViewDelegate {
         }
         
         if let url = request.url {
-            
             // メモ : twitter の scheme は http
 //            print("scheme - \(url.scheme)")
-            
             if url.scheme! == "mailto" {
                 if #available(iOS 10.0, *) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)

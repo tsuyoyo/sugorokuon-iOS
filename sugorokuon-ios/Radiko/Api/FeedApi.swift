@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
 class FeedApi {
@@ -27,25 +28,23 @@ class FeedApi {
      * it will emit [] (empty array).
      *
      */
-    func fetchNowOnAirSongs(station id : String) -> Single<Array<OnAirSong>> {
-        return Single<Array<OnAirSong>>.create(subscribe: { (observer) -> Disposable in
-            let url = URL(string: self.urlManager.nowOnAir(station: id))!
-            let parser = XMLParser(contentsOf: url)!
-            let delegate = NowOnAirParser()
-
-            parser.delegate = delegate
-            if parser.parse() {
-                delegate
-                    .observeNowOnAirParsed()
-                    .do(onNext: { items in
-                        observer(.success(items))
-                    })
-                    .subscribe()
-                    .addDisposableTo(self.disposeBag)
-            } else {
-                observer(.success([]))
-            }
-            return Disposables.create()
-        })
+    func fetchNowOnAirSongs(station id : String) -> Observable<Array<OnAirSong>> {
+        let url = URL(string: self.urlManager.nowOnAir(station: id))!
+        return URLSession.shared
+            .rx
+            .response(request: URLRequest(url: url))
+            .flatMap({ (response, data) -> Observable<Array<OnAirSong>> in
+                if response.statusCode == 200 {
+                    let parser = XMLParser(data: data)
+                    let delegate = NowOnAirParser()
+                    parser.delegate = delegate
+                    
+                    let observable = delegate.observeNowOnAirParsed()
+                    parser.parse()
+                    return observable
+                } else {
+                    return Observable.just([])
+                }
+            })
     }
 }

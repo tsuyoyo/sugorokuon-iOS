@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
 class StationApi {
@@ -18,13 +19,19 @@ class StationApi {
     }
     
     func fetchStations(region id : String) -> Observable<Array<Station>> {
-        let url = URL(string: urlManager.stationList(region: id))
-        let parser = XMLParser(contentsOf: url!)
-        let delegate = StationResponseParser(urlManager: urlManager)
-        parser!.delegate = delegate
-        
-        let stationObserver = delegate.parsedStations()
-        parser?.parse()
-        return stationObserver
-    }    
+        let url = URL(string: urlManager.stationList(region: id))!
+        return URLSession.shared
+            .rx
+            .response(request: URLRequest(url: url))
+            .flatMap { (_, data) -> Observable<Array<Station>> in
+                let delegate = StationResponseParser(urlManager: self.urlManager)
+                let parser = XMLParser(data: data)
+                parser.delegate = delegate
+                
+                let stationObserver = delegate.parsedStations()
+                parser.parse()
+                return stationObserver
+            }
+    }
+
 }

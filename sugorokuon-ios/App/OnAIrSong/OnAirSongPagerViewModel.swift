@@ -45,7 +45,7 @@ extension OnAirSongPagerViewModel : OnAirSongPagerViewModelInput {
             .map { station -> OnAirSongsList in
                 return OnAirSongsList(station: station, songs: [])
             }
-            .flatMap { onAirSongs -> Single<OnAirSongsList> in
+            .flatMap { onAirSongs -> Observable<OnAirSongsList> in
                 return self.feedApi
                     .fetchNowOnAirSongs(station: onAirSongs.station.id)
                     .map { songs -> OnAirSongsList in

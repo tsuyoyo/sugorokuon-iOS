@@ -30,10 +30,17 @@ class DateSelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         datePicker.setDate(date, animated: false)
-        datePicker.minimumDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
-        datePicker.maximumDate = Calendar.current.date(byAdding: .day, value: 7, to: Date())
+        datePicker.minimumDate = Calendar.current.date(
+            byAdding: .day,
+            value: -7,
+            to: Date()
+        )
+        datePicker.maximumDate = Calendar.current.date(
+            byAdding: .day,
+            value: 7,
+            to: Date()
+        )
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,15 +57,4 @@ class DateSelectViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
 class TimeTableApi {
@@ -17,30 +18,19 @@ class TimeTableApi {
         self.urlManager = urlManager
     }
     
-    func fetchTimeTable(region id: String, date : Date) -> Observable<Array<TimeTable>>{
+    func fetchTimeTable(region id: String, date : Date) -> Observable<Array<TimeTable>> {
         let url = URL(string: urlManager.timeTable(date: date, region: id))!
-        let parser = XMLParser(contentsOf: url)!
-        
-        let parserDelegate = OneDayTimeTableParser()
-        parser.delegate = parserDelegate
-        
-        let observer = parserDelegate.observeTodayTimeTableParsed()
-//            .filter { timeTable -> Bool in
-//                return !timeTable.isEmpty
-//            }
-//            .flatMapFirst({ timeTable -> Maybe<Array<TimeTable>> in
-//                return Maybe.just(timeTable)
-//            })
-//            .map { timeTable -> Array<TimeTable> in
-//                return timeTable
-//            }
-//
-//            .asMaybe()
-//
-//            .map { timeTable -> Array<TimeTable> in
-//                return timeTable
-//            }
-        parser.parse()
-        return observer
+        return URLSession.shared
+            .rx
+            .response(request: URLRequest(url: url))
+            .flatMap({ (_, data) -> Observable<Array<TimeTable>> in
+                let parser = XMLParser(contentsOf: url)!
+                let parserDelegate = OneDayTimeTableParser()
+                parser.delegate = parserDelegate
+                
+                let observable = parserDelegate.observeTodayTimeTableParsed()
+                parser.parse()
+                return observable
+            })
     }
 }

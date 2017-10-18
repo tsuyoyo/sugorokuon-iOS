@@ -10,11 +10,14 @@ import Foundation
 import RxSwift
 
 protocol TimeTablePagerViewModelInput {
-    func setAreaAndDate(region id: String, date: Date) -> Void
+
+    func setDate(date: Date) -> Void
     
     func fetchNextDay() -> Void
     
     func fetchPreviousDay() -> Void
+    
+    func closeIntroduction() -> Void
 }
 
 protocol TimeTablePagerViewModelOutput {
@@ -28,6 +31,8 @@ protocol TimeTablePagerViewModelOutput {
     var fetchErrorSignal : Observable<String> { get }
     
     var isFetching : Observable<Bool> { get }
+    
+    var showIntroduction : Observable<Bool> { get }
 }
 
 class TimeTablePagerViewModel {
@@ -37,6 +42,7 @@ class TimeTablePagerViewModel {
 
     fileprivate let disposeBag = DisposeBag()
     
+    fileprivate let regionRepository : RegionRepository
     fileprivate var region : String!
     
     fileprivate let date : BehaviorSubject<Date>
@@ -44,17 +50,40 @@ class TimeTablePagerViewModel {
     fileprivate let stations = PublishSubject<Array<Station>>()
     fileprivate let fetchError = PublishSubject<String>()
     fileprivate let fetching = BehaviorSubject<Bool>(value: false)
+    fileprivate let signalToShowIntruduction = BehaviorSubject<Bool>(value: false)
     
-    init(stationApi: StationApi, timeTableApi: TimeTableApi) {
+    init(stationApi: StationApi,
+         timeTableApi: TimeTableApi,
+         regionRepository: RegionRepository) {
         self.stationApi = stationApi
         self.timeTableApi = timeTableApi
+        self.regionRepository = regionRepository
         self.date = BehaviorSubject<Date>(value: Date())
     }
-}
-
-extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
     
-    func setAreaAndDate(region id: String, date: Date) {
+    func setup() {
+        Observable
+            .combineLatest(
+                self.regionRepository.observeRegion(),
+                self.date
+            )
+            .subscribe({ event in
+                if let region : Region = event.element?.0,
+                    let date : Date = event.element?.1 {
+                    if region == Region.NO_REGION {
+                        self.signalToShowIntruduction.onNext(true)
+                    } else {
+                        self.setAreaAndDate(
+                            region: region.value().id,
+                            date: date
+                        )
+                    }
+                }
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    private func setAreaAndDate(region id: String, date: Date) {
         region = id
         fetching.onNext(true)
         Observable
@@ -64,7 +93,6 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
                     self.stations.onNext(stations)
                     self.timeTables.onNext(timeTables)
                     self.fetching.onNext(false)
-                    self.date.onNext(date)
             }
             .do(onError: { error in
                 self.fetching.onNext(false)
@@ -72,6 +100,13 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
             })
             .subscribe()
             .addDisposableTo(disposeBag)
+    }
+}
+
+extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
+    
+    func setDate(date: Date) {
+        self.date.onNext(date)
     }
     
     func fetchNextDay() {
@@ -82,6 +117,10 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
         fetchTimeTable(timeInterval: (-1) * 60 * 60 * 24)
     }
     
+    func closeIntroduction() {
+        signalToShowIntruduction.onNext(false)
+    }
+    
     private func fetchTimeTable(timeInterval sinceToday: Double) {
         var currentDate : Date
         do {
@@ -89,27 +128,17 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
         } catch {
             return
         }
-        self.fetching.onNext(true)
-        let nextDay = Date(timeInterval: sinceToday, since: currentDate)
-        timeTableApi.fetchTimeTable(region: region!, date: nextDay)
-            .do(
-                onNext: { timeTables in
-                    self.fetching.onNext(false)
-                    self.timeTables.onNext(timeTables)
-                    self.date.onNext(nextDay)
-            },
-                onError: { error in
-                    self.fetching.onNext(false)
-                    self.fetchError.onNext(error.localizedDescription)
-            }
+        date.onNext(
+            Date(
+                timeInterval: sinceToday,
+                since: currentDate
             )
-            .subscribe()
-            .addDisposableTo(disposeBag)
+        )
     }
-
 }
 
 extension TimeTablePagerViewModel : TimeTablePagerViewModelOutput {
+    
     var selectedDate: Observable<Date> {
         return self.date.asObservable()
     }
@@ -128,5 +157,9 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelOutput {
     
     var isFetching: Observable<Bool> {
         return self.fetching.asObservable()
+    }
+    
+    var showIntroduction: Observable<Bool> {
+        return self.signalToShowIntruduction.asObservable()
     }
 }
