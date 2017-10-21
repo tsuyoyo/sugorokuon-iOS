@@ -22,6 +22,10 @@
 		5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
 		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
+		5E1BB7DF1F9B83650047F07D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */; };
+		5E1BB7E01F9B83650047F07D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */; };
+		5E1BB7E21F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */; };
+		5E1BB7E31F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
 		5E54F1801F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
 		5E54F1811F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
@@ -173,6 +177,14 @@
 		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
 		5E188CF21F8BA070004E2A32 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
+		5E1BB7D81F9B7FD60047F07D /* ic_radio_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_3x.png; sourceTree = "<group>"; };
+		5E1BB7D91F9B7FD70047F07D /* ic_radio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio.png; sourceTree = "<group>"; };
+		5E1BB7DA1F9B7FD70047F07D /* ic_radio_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_2x.png; sourceTree = "<group>"; };
+		5E1BB7DB1F9B82CD0047F07D /* ic_settings_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_settings_2x.png; sourceTree = "<group>"; };
+		5E1BB7DC1F9B82CE0047F07D /* ic_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_settings.png; sourceTree = "<group>"; };
+		5E1BB7DD1F9B82CE0047F07D /* ic_settings_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_settings_3x.png; sourceTree = "<group>"; };
+		5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarController.swift; path = "sugorokuon-ios/App/Introduction/HomeTabBarController.swift"; sourceTree = SOURCE_ROOT; };
+		5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarDelegate.swift; path = "sugorokuon-ios/App/Introduction/HomeTabBarDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
 		5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
 		5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewModel.swift; sourceTree = "<group>"; };
@@ -287,6 +299,12 @@
 		5E07314E1F87D7640086D0B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E1BB7DB1F9B82CD0047F07D /* ic_settings_2x.png */,
+				5E1BB7DD1F9B82CE0047F07D /* ic_settings_3x.png */,
+				5E1BB7DC1F9B82CE0047F07D /* ic_settings.png */,
+				5E1BB7DA1F9B7FD70047F07D /* ic_radio_2x.png */,
+				5E1BB7D81F9B7FD60047F07D /* ic_radio_3x.png */,
+				5E1BB7D91F9B7FD70047F07D /* ic_radio.png */,
 				5E0731461F87D7080086D0B1 /* ic_audiotrack.png */,
 				5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */,
 				5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */,
@@ -438,6 +456,8 @@
 		5EAF633A1F6D5E18005F74A4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */,
+				5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -744,6 +764,7 @@
 			files = (
 				5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */,
 				5EAF632B1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
+				5E1BB7DF1F9B83650047F07D /* HomeTabBarController.swift in Sources */,
 				5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */,
 				5ED703741F7E7A5C00A04685 /* FeedApi.swift in Sources */,
 				5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
@@ -778,6 +799,7 @@
 				5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */,
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
 				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
+				5E1BB7E21F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */,
 				5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */,
 				5E8234D31F94EE0F00486124 /* IntroductionViewController.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
@@ -803,9 +825,11 @@
 				5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
 				5EFD3EEA1F76AC4E006BD744 /* TimeTablePagerViewModel.swift in Sources */,
 				5EAF633D1F6D5E9C005F74A4 /* TimeTablePagerViewController.swift in Sources */,
+				5E1BB7E31F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */,
 				5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */,
 				5EAF632F1F6D281A005F74A4 /* TimeTable.swift in Sources */,
 				5EAF632E1F6D2815005F74A4 /* Station.swift in Sources */,
+				5E1BB7E01F9B83650047F07D /* HomeTabBarController.swift in Sources */,
 				5EAF63291F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */,
 				5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */,

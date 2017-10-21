@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 import RxSwift
 
-class OnAirSongPagerViewController: ButtonBarPagerTabStripViewController {
+class OnAirSongPagerViewController: ButtonBarPagerTabStripViewController, HomeTabBarDelegate {
     
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     
@@ -24,6 +24,10 @@ class OnAirSongPagerViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
         
         bindViewModel()
+        viewModel.fetchOnAirSongs(region: "JP13")
+    }
+    
+    func didTabSelected() {
         viewModel.fetchOnAirSongs(region: "JP13")
     }
 

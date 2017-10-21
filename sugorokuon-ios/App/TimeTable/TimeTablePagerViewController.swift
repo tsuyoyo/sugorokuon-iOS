@@ -14,6 +14,7 @@ import RxSwift
 class TimeTablePagerViewController:
     ButtonBarPagerTabStripViewController,
     DateSelectorViewControllerDelegate,
+    HomeTabBarDelegate,
 IntroductionViewDelegate {
 
     let purpleInspireColor = UIColor(red:3/255, green:155/255, blue:229/255, alpha:1.0)
@@ -102,6 +103,11 @@ IntroductionViewDelegate {
         }
         
         return views
+    }
+    
+    // MARK : - HomeTabBarDelegate
+    func didTabSelected() {
+        viewModel.fetchToday()
     }
     
     // MARK : - DateSelectorViewControllerDelegate

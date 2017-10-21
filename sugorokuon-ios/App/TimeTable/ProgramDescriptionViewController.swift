@@ -64,9 +64,8 @@ class ProgramDescriptionViewController: UIViewController {
         if (program?.url != nil && (program?.url!.isEmpty)!)
             || program?.url == nil {
             webSiteButton.isEnabled = false
+            webSiteButton.setTitleColor(UIColor.gray, for: UIControlState.disabled)
         }
-
-        // Do any additional setup after loading the view.
     }
     
     private func setupAdMob() {

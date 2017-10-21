@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeB-ec-BF9">
-                                <rect key="frame" x="0.0" y="102" width="320" height="364"/>
+                                <rect key="frame" x="0.0" y="204" width="320" height="364"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-Au-MYd">
                                         <rect key="frame" x="0.0" y="310" width="320" height="30"/>
@@ -81,7 +81,6 @@
                                     <constraint firstItem="uhe-Me-EVh" firstAttribute="trailing" secondItem="F0S-2P-5Th" secondAttribute="trailing" id="gY1-oy-0yd"/>
                                     <constraint firstItem="uhe-Me-EVh" firstAttribute="top" secondItem="F0S-2P-5Th" secondAttribute="bottom" constant="8" id="hGM-oF-Abo"/>
                                     <constraint firstItem="8Y3-Au-MYd" firstAttribute="top" secondItem="mRA-Ci-bNA" secondAttribute="bottom" constant="16" id="p6a-L7-hQ0"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="360" id="v0N-Nl-9hf"/>
                                     <constraint firstAttribute="trailing" secondItem="F0S-2P-5Th" secondAttribute="trailing" id="wGP-T2-xy3"/>
                                     <constraint firstAttribute="trailing" secondItem="mRA-Ci-bNA" secondAttribute="trailing" id="xFY-ea-f5c"/>
                                     <constraint firstAttribute="trailing" secondItem="8Y3-Au-MYd" secondAttribute="trailing" id="xyu-bh-jFh"/>
@@ -91,8 +90,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30286815070000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qeB-ec-BF9" firstAttribute="centerX" secondItem="ATH-tb-Z8O" secondAttribute="centerX" id="FdO-kA-9W9"/>
-                            <constraint firstItem="qeB-ec-BF9" firstAttribute="centerY" secondItem="ATH-tb-Z8O" secondAttribute="centerY" id="Ip8-2s-owk"/>
                             <constraint firstAttribute="trailing" secondItem="qeB-ec-BF9" secondAttribute="trailing" id="kqT-BU-rCm"/>
+                            <constraint firstAttribute="bottom" secondItem="qeB-ec-BF9" secondAttribute="bottom" id="s7G-aT-yL3"/>
                             <constraint firstItem="qeB-ec-BF9" firstAttribute="leading" secondItem="ATH-tb-Z8O" secondAttribute="leading" id="wR7-m1-JxW"/>
                         </constraints>
                     </view>

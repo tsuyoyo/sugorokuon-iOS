@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +64,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-wj-ILn">
-                                <rect key="frame" x="43" y="68" width="290" height="62.5"/>
+                                <rect key="frame" x="42.5" y="68" width="290" height="62.5"/>
                                 <string key="text">はじめまして
 ラジコンシェルジュです</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -105,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-1874.4000000000001" y="-1244.527736131934"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Tab Bar Controller-->
         <scene sceneID="COr-O5-mbe">
             <objects>
-                <tabBarController id="0FE-db-Xj3" sceneMemberID="viewController">
+                <tabBarController id="0FE-db-Xj3" customClass="HomeTabBarController" customModule="sugorokuon_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tZB-Xs-dcg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -125,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="-1866" y="-526"/>
         </scene>
-        <!--Time Table Pager View Controller-->
+        <!--番組表-->
         <scene sceneID="bEU-xp-U4K">
             <objects>
                 <viewController id="BXp-HJ-bph" customClass="TimeTablePagerViewController" customModule="sugorokuon_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,15 +220,14 @@
                             <constraint firstItem="lrl-Md-XdN" firstAttribute="top" secondItem="UIZ-99-KK1" secondAttribute="bottom" id="nmW-gZ-bZk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="mXy-H8-TKI">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" tag="1" title="番組表" image="ic_radio" id="mXy-H8-TKI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonBarView" destination="UIZ-99-KK1" id="dOK-wZ-Xrf"/>
                         <outlet property="containerView" destination="lrl-Md-XdN" id="d03-lr-AMH"/>
                         <outlet property="loading" destination="9dI-VR-20V" id="b8v-mi-XfY"/>
                         <outlet property="navigationItem" destination="gvI-cg-Hih" id="SdM-zW-4uF"/>
+                        <outlet property="tabBarItem" destination="mXy-H8-TKI" id="lPS-QN-rLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFl-Zs-SDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +283,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" id="5Sg-Le-7L8"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="ic_settings.png" id="5Sg-Le-7L8"/>
                     <navigationItem key="navigationItem" title="設定" id="Zpa-EM-me0"/>
                     <connections>
                         <outlet property="table" destination="Ydu-Y0-bxX" id="AU8-Wo-KpE"/>
@@ -350,11 +350,11 @@
             </objects>
             <point key="canvasLocation" x="-1728.8" y="689.5052473763119"/>
         </scene>
-        <!--Item-->
+        <!--設定-->
         <scene sceneID="2VZ-ii-WPc">
             <objects>
                 <navigationController id="9np-dT-9YZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="OBW-14-eru"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="設定" image="ic_settings" id="OBW-14-eru"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbU-7t-dKU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -506,68 +506,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-xy-aKD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="29"/>
-                                <color key="backgroundColor" red="0.011764705882352941" green="0.60784313725490191" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-UM-9l7">
+                                <rect key="frame" x="0.0" y="44" width="375" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-xy-aKD">
+                                        <rect key="frame" x="16" y="6" width="359" height="21"/>
+                                        <color key="backgroundColor" red="0.011764705882352941" green="0.60784313725490191" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.01176470588" green="0.60784313729999995" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="NbT-Pv-cnD"/>
+                                    <constraint firstItem="pW7-xy-aKD" firstAttribute="leading" secondItem="y9l-UM-9l7" secondAttribute="leading" constant="16" id="5YP-0z-rY9"/>
+                                    <constraint firstItem="pW7-xy-aKD" firstAttribute="centerY" secondItem="y9l-UM-9l7" secondAttribute="centerY" id="5fk-ds-VKa"/>
+                                    <constraint firstAttribute="height" constant="32" id="P3G-2m-m9N"/>
+                                    <constraint firstAttribute="trailing" secondItem="pW7-xy-aKD" secondAttribute="trailing" id="TfL-38-qyY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.88235294119999996" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-Qx-grd">
-                                <rect key="frame" x="0.0" y="57" width="375" height="492"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="493"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="492" id="hTX-42-hZg"/>
-                                </constraints>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                             </webView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geo-Wb-UMc" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpy-fh-QFF">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geo-Wb-UMc" customClass="GADBannerView">
+                                        <rect key="frame" x="27.5" y="0.0" width="320" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="LjH-XJ-EIP"/>
+                                            <constraint firstAttribute="height" constant="50" id="kUq-bC-3o0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="LjH-XJ-EIP"/>
-                                    <constraint firstAttribute="height" constant="50" id="kUq-bC-3o0"/>
+                                    <constraint firstAttribute="height" constant="50" id="50E-Oo-Dqs"/>
+                                    <constraint firstItem="geo-Wb-UMc" firstAttribute="top" secondItem="Wpy-fh-QFF" secondAttribute="top" id="877-ZQ-eEp"/>
+                                    <constraint firstAttribute="bottom" secondItem="geo-Wb-UMc" secondAttribute="bottom" id="YVN-v8-fcF"/>
+                                    <constraint firstItem="geo-Wb-UMc" firstAttribute="centerX" secondItem="Wpy-fh-QFF" secondAttribute="centerX" id="ZA6-P3-cKM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUa-tr-AaR">
-                                <rect key="frame" x="0.0" y="549" width="375" height="34"/>
+                                <rect key="frame" x="187.5" y="569" width="187.5" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="u0u-OB-BWS"/>
+                                </constraints>
                                 <state key="normal" title="番組サイト">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onWebSiteSelected:" destination="NT2-Jg-tWT" eventType="touchDown" id="Zk0-Zi-PpH"/>
+                                    <action selector="onWebSiteSelected:" destination="NT2-Jg-tWT" eventType="touchUpInside" id="YTu-VO-Le6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz8-cS-EH7">
-                                <rect key="frame" x="0.0" y="583" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="569" width="187.5" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fxH-Md-PrA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="閉じる"/>
                                 <connections>
-                                    <action selector="onClosed:" destination="NT2-Jg-tWT" eventType="touchDown" id="RjF-qv-oMl"/>
+                                    <action selector="onClosed:" destination="NT2-Jg-tWT" eventType="touchUpInside" id="oCL-Mb-aiq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3028681506849315" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eUa-tr-AaR" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="4Ad-AI-ZqH"/>
-                            <constraint firstAttribute="trailing" secondItem="pW7-xy-aKD" secondAttribute="trailing" id="96c-cm-PAO"/>
-                            <constraint firstAttribute="trailing" secondItem="Unb-Qx-grd" secondAttribute="trailing" id="9CM-4f-sc8"/>
-                            <constraint firstItem="geo-Wb-UMc" firstAttribute="bottom" secondItem="VDb-oJ-Lgp" secondAttribute="bottomMargin" id="DXq-4P-P6a"/>
-                            <constraint firstItem="geo-Wb-UMc" firstAttribute="top" secondItem="dz8-cS-EH7" secondAttribute="bottom" id="IJi-eW-ski"/>
-                            <constraint firstItem="dz8-cS-EH7" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="Qld-tK-qNE"/>
-                            <constraint firstItem="Unb-Qx-grd" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="aF4-hj-eSR"/>
-                            <constraint firstItem="geo-Wb-UMc" firstAttribute="centerX" secondItem="VDb-oJ-Lgp" secondAttribute="centerX" id="aNS-C2-Cfg"/>
-                            <constraint firstItem="pW7-xy-aKD" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="jNJ-GC-JCb"/>
-                            <constraint firstAttribute="trailing" secondItem="dz8-cS-EH7" secondAttribute="trailing" id="nuq-cU-JvT"/>
-                            <constraint firstAttribute="trailing" secondItem="eUa-tr-AaR" secondAttribute="trailing" id="pJb-NB-Zft"/>
-                            <constraint firstItem="Unb-Qx-grd" firstAttribute="top" secondItem="pW7-xy-aKD" secondAttribute="bottom" id="pbf-bY-SkU"/>
-                            <constraint firstItem="dz8-cS-EH7" firstAttribute="top" secondItem="eUa-tr-AaR" secondAttribute="bottom" id="pgS-UO-GFe"/>
-                            <constraint firstItem="eUa-tr-AaR" firstAttribute="top" secondItem="Unb-Qx-grd" secondAttribute="bottom" id="ztN-HS-VIn"/>
+                            <constraint firstItem="y9l-UM-9l7" firstAttribute="top" secondItem="pQB-Oe-cSG" secondAttribute="bottom" constant="24" id="1Aq-BE-zX0"/>
+                            <constraint firstItem="Wpy-fh-QFF" firstAttribute="top" secondItem="Unb-Qx-grd" secondAttribute="bottom" constant="48" id="2Z2-SI-kPQ"/>
+                            <constraint firstAttribute="trailing" secondItem="y9l-UM-9l7" secondAttribute="trailing" id="4jl-lz-F44"/>
+                            <constraint firstAttribute="trailing" secondItem="Wpy-fh-QFF" secondAttribute="trailing" id="90C-cJ-cYN"/>
+                            <constraint firstItem="Unb-Qx-grd" firstAttribute="top" secondItem="y9l-UM-9l7" secondAttribute="bottom" id="9Ur-8F-9pi"/>
+                            <constraint firstItem="Wpy-fh-QFF" firstAttribute="top" secondItem="dz8-cS-EH7" secondAttribute="bottom" id="C2E-k9-WzW"/>
+                            <constraint firstAttribute="trailing" secondItem="eUa-tr-AaR" secondAttribute="trailing" id="GcU-pi-Inw"/>
+                            <constraint firstItem="y9l-UM-9l7" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="KMk-EA-GBP"/>
+                            <constraint firstAttribute="trailing" secondItem="Unb-Qx-grd" secondAttribute="trailing" id="Kos-RL-WhM"/>
+                            <constraint firstAttribute="bottom" secondItem="Wpy-fh-QFF" secondAttribute="bottom" id="LYL-qo-dqp"/>
+                            <constraint firstItem="dz8-cS-EH7" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="OT8-1R-C7O"/>
+                            <constraint firstItem="Wpy-fh-QFF" firstAttribute="top" secondItem="eUa-tr-AaR" secondAttribute="bottom" id="Qy5-5d-VDg"/>
+                            <constraint firstItem="Wpy-fh-QFF" firstAttribute="centerX" secondItem="VDb-oJ-Lgp" secondAttribute="centerX" id="Voy-3J-SoU"/>
+                            <constraint firstItem="dz8-cS-EH7" firstAttribute="width" secondItem="VDb-oJ-Lgp" secondAttribute="width" multiplier="0.5" id="pLq-OR-Euz"/>
+                            <constraint firstAttribute="trailing" secondItem="Unb-Qx-grd" secondAttribute="trailing" id="s5b-wQ-tm2"/>
+                            <constraint firstItem="Unb-Qx-grd" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="tCq-F8-M3o"/>
+                            <constraint firstItem="Wpy-fh-QFF" firstAttribute="leading" secondItem="VDb-oJ-Lgp" secondAttribute="leading" id="tVf-Qt-gul"/>
+                            <constraint firstItem="eUa-tr-AaR" firstAttribute="width" secondItem="VDb-oJ-Lgp" secondAttribute="width" multiplier="0.5" id="txr-fW-Z60"/>
                         </constraints>
                     </view>
                     <connections>
@@ -635,7 +663,7 @@
                             <constraint firstItem="b9h-o1-fIb" firstAttribute="leading" secondItem="8x9-3i-ucK" secondAttribute="leading" id="vS1-3g-ueG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="OnAir曲" id="hvz-4M-8Bq"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="OnAir曲" image="ic_audiotrack" id="hvz-4M-8Bq"/>
                     <connections>
                         <outlet property="buttonBarView" destination="VJP-6y-u5f" id="vPx-xP-XED"/>
                         <outlet property="containerView" destination="6Ip-zg-Ezc" id="iT1-0z-gKc"/>
@@ -755,4 +783,10 @@
             <point key="canvasLocation" x="538.39999999999998" y="241.52923538230885"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_audiotrack" width="24" height="24"/>
+        <image name="ic_radio" width="24" height="24"/>
+        <image name="ic_settings" width="24" height="24"/>
+        <image name="ic_settings.png" width="24" height="24"/>
+    </resources>
 </document>

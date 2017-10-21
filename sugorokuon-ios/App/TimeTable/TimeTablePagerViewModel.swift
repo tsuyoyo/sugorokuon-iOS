@@ -17,6 +17,8 @@ protocol TimeTablePagerViewModelInput {
     
     func fetchPreviousDay() -> Void
     
+    func fetchToday() -> Void
+    
     func closeIntroduction() -> Void
 }
 
@@ -107,6 +109,10 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
     
     func setDate(date: Date) {
         self.date.onNext(date)
+    }
+    
+    func fetchToday() {
+        setDate(date: Date())
     }
     
     func fetchNextDay() {
