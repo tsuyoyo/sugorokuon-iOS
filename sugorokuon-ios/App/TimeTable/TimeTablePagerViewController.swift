@@ -11,11 +11,8 @@ import XLPagerTabStrip
 import RxSwift
 
 // https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9 を参考に
-class TimeTablePagerViewController:
-    ButtonBarPagerTabStripViewController,
-    DateSelectorViewControllerDelegate,
-    HomeTabBarDelegate,
-IntroductionViewDelegate {
+class TimeTablePagerViewController: ButtonBarPagerTabStripViewController,
+    DateSelectorViewControllerDelegate, HomeTabBarDelegate, IntroductionViewDelegate {
 
     let purpleInspireColor = UIColor(red:3/255, green:155/255, blue:229/255, alpha:1.0)
 
@@ -30,10 +27,13 @@ IntroductionViewDelegate {
 
     private let repository = TimeTableRepository()
     private let urlManager = UrlManager()
+    private let radikoDateUtil = RadikoDateUtil()
     
     private var titleLabel : UILabel!
     
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var nextDayButton: UIBarButtonItem!
+    @IBOutlet weak var previousDayButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         // Have to call before viewDidLoad()
@@ -92,7 +92,7 @@ IntroductionViewDelegate {
                 return t.stationId == station.id
             }
             if !filtered.isEmpty {
-                vc.setup(station: station, timeTable: filtered[0])
+                vc.setup(station: station, timeTable: filtered[0], radikoDateUtil: radikoDateUtil)
                 views.append(vc)
             }
         }
@@ -139,7 +139,8 @@ IntroductionViewDelegate {
         viewModel = TimeTablePagerViewModel(
             stationApi: StationApi(urlManager: urlManager),
             timeTableApi: TimeTableApi(urlManager: urlManager),
-            regionRepository: RegionRepository.get()
+            regionRepository: RegionRepository.get(),
+            radikoDateUtil: RadikoDateUtil()
         )
 
         Observable
@@ -169,6 +170,32 @@ IntroductionViewDelegate {
             .observeOn(MainScheduler.instance)
             .do(onNext: { fetching in
                 self.loading.isHidden = !fetching
+            })
+            .subscribe()
+            .addDisposableTo(disposeBag)
+        
+        viewModel.isNextDayAvailable
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { nextDayAvailable in
+                self.nextDayButton.isEnabled = nextDayAvailable
+                if nextDayAvailable {
+                    self.nextDayButton.tintColor = UIColor.white
+                } else {
+                    self.nextDayButton.tintColor = UIColor.gray
+                }
+            })
+            .subscribe()
+            .addDisposableTo(disposeBag)
+        
+        viewModel.isPreviousDayAvailable
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { previousDayAvailable in
+                self.previousDayButton.isEnabled = previousDayAvailable
+                if previousDayAvailable {
+                    self.previousDayButton.tintColor = UIColor.white
+                } else {
+                    self.previousDayButton.tintColor = UIColor.gray
+                }
             })
             .subscribe()
             .addDisposableTo(disposeBag)

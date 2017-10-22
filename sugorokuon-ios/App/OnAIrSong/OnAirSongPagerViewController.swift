@@ -17,18 +17,29 @@ class OnAirSongPagerViewController: ButtonBarPagerTabStripViewController, HomeTa
     private let urlManager = UrlManager()
     private let disposeBags = DisposeBag()
     private var viewModel : OnAirSongPagerViewModel!
+    
+    private let regionRepository = RegionRepository.get()
+    private var currentRegion : Region?
+    
     private var onAirSongs : Array<OnAirSongsList> = []
     
     override func viewDidLoad() {
         setupTabBar()
         super.viewDidLoad()
-        
         bindViewModel()
-        viewModel.fetchOnAirSongs(region: "JP13")
+        regionRepository.observeRegion()
+            .do(onNext: { region in
+                self.currentRegion = region
+                self.viewModel.fetchOnAirSongs(region: region.value().id)
+            })
+            .subscribe()
+            .addDisposableTo(disposeBags)
     }
     
     func didTabSelected() {
-        viewModel.fetchOnAirSongs(region: "JP13")
+        if let region = currentRegion {
+            viewModel.fetchOnAirSongs(region: region.value().id)
+        }
     }
 
     override func didReceiveMemoryWarning() {

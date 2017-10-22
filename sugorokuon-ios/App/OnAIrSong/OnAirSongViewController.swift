@@ -59,7 +59,12 @@ class OnAirSongViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             })
             .addDisposableTo(disposeBag)
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let selectedRow = table.indexPathForSelectedRow {
+            table.deselectRow(at: selectedRow, animated: false)
+        }
     }
     
     func refreshOnAirSong() {

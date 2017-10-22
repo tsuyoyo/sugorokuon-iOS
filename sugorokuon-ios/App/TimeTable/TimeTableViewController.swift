@@ -16,14 +16,16 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
     private let disposeBag = DisposeBag()
 
     private var viewModel : TimeTableViewModel!
-    private var station : Station!    
+    private var station : Station!
+    private var radikoDateUtil: RadikoDateUtil!
     private var programs : Array<Program> = []
     
     @IBOutlet weak var table: UITableView!
 
-    func setup(station: Station, timeTable: TimeTable) {
-        viewModel = TimeTableViewModel(timeTable: timeTable)
+    func setup(station: Station, timeTable: TimeTable, radikoDateUtil: RadikoDateUtil) {
+        viewModel = TimeTableViewModel(timeTable: timeTable, radikoDateUtil: radikoDateUtil)
         self.station = station
+        self.radikoDateUtil = radikoDateUtil
     }
     
     override func viewDidLoad() {
@@ -48,6 +50,15 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
                 self.table.reloadData()
             }
             .addDisposableTo(disposeBag)
+        
+        viewModel?.onAirProgramIndex
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { focusedIndex -> Void in
+                let indexPath = IndexPath(row: focusedIndex, section: 0)
+                self.table.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+                self.table.deselectRow(at: indexPath, animated: false)
+            })
+            .addDisposableTo(disposeBag)
     }
 
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +66,8 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "programCell", for: indexPath)
+        let cell = table.dequeueReusableCell(
+            withIdentifier: "programCell", for: indexPath)
 
         let title = table.viewWithTag(1) as! UILabel?
         let personalities = table.viewWithTag(2) as! UILabel?
@@ -95,18 +107,8 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         bottomSheet.set(program: programs[indexPath.row])
         present(bottomSheet, animated: true, completion: nil)
         
-        table.deselectRow(at: indexPath, animated: true)
+        table.deselectRow(at: indexPath, animated: false)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         if let stationName = station?.name {
@@ -114,6 +116,5 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
         } else {
             return IndicatorInfo(title: "No station name")
         }
-
     }
 }

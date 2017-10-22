@@ -35,12 +35,17 @@ protocol TimeTablePagerViewModelOutput {
     var isFetching : Observable<Bool> { get }
     
     var showIntroduction : Observable<Bool> { get }
+    
+    var isNextDayAvailable : Observable<Bool> { get }
+    
+    var isPreviousDayAvailable : Observable<Bool> { get }
 }
 
 class TimeTablePagerViewModel {
     
     fileprivate let stationApi : StationApi
     fileprivate let timeTableApi : TimeTableApi
+    fileprivate let radikoDateUtil : RadikoDateUtil
 
     fileprivate let disposeBag = DisposeBag()
     
@@ -53,14 +58,18 @@ class TimeTablePagerViewModel {
     fileprivate let fetchError = PublishSubject<String>()
     fileprivate let fetching = BehaviorSubject<Bool>(value: false)
     fileprivate let signalToShowIntruduction = BehaviorSubject<Bool>(value: false)
+    fileprivate let nextDayAvailable = BehaviorSubject<Bool>(value: false)
+    fileprivate let previousDayAvailable = BehaviorSubject<Bool>(value: false)
     
     init(stationApi: StationApi,
          timeTableApi: TimeTableApi,
-         regionRepository: RegionRepository) {
+         regionRepository: RegionRepository,
+         radikoDateUtil : RadikoDateUtil) {
         self.stationApi = stationApi
         self.timeTableApi = timeTableApi
         self.regionRepository = regionRepository
-        self.date = BehaviorSubject<Date>(value: Date())
+        self.radikoDateUtil = radikoDateUtil
+        self.date = BehaviorSubject<Date>(value: radikoDateUtil.getToday())
     }
     
     func setup() {
@@ -83,6 +92,16 @@ class TimeTablePagerViewModel {
                 }
             })
             .addDisposableTo(disposeBag)
+        
+        date.subscribe(onNext: { d in
+            let now = self.radikoDateUtil.getToday()
+            let rangeTail = now.addingTimeInterval(60 * 60 * 24 * 7)
+            let rangeBegin = now.addingTimeInterval((-1) * 60 * 60 * 24 * 7)
+            
+            self.nextDayAvailable.onNext(d < rangeTail)
+            self.previousDayAvailable.onNext(d > rangeBegin)
+            
+        }).addDisposableTo(disposeBag)
     }
     
     private func setAreaAndDate(region id: String, date: Date) {
@@ -103,6 +122,7 @@ class TimeTablePagerViewModel {
             .subscribe()
             .addDisposableTo(disposeBag)
     }
+    
 }
 
 extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
@@ -112,7 +132,7 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelInput {
     }
     
     func fetchToday() {
-        setDate(date: Date())
+        setDate(date: radikoDateUtil.getToday())
     }
     
     func fetchNextDay() {
@@ -167,5 +187,13 @@ extension TimeTablePagerViewModel : TimeTablePagerViewModelOutput {
     
     var showIntroduction: Observable<Bool> {
         return self.signalToShowIntruduction.asObservable()
+    }
+    
+    var isNextDayAvailable: Observable<Bool> {
+        return self.nextDayAvailable.asObservable()
+    }
+    
+    var isPreviousDayAvailable: Observable<Bool> {
+        return self.previousDayAvailable.asObservable()
     }
 }

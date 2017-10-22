@@ -227,6 +227,8 @@
                         <outlet property="containerView" destination="lrl-Md-XdN" id="d03-lr-AMH"/>
                         <outlet property="loading" destination="9dI-VR-20V" id="b8v-mi-XfY"/>
                         <outlet property="navigationItem" destination="gvI-cg-Hih" id="SdM-zW-4uF"/>
+                        <outlet property="nextDayButton" destination="tMk-D8-24r" id="VAz-fu-gFG"/>
+                        <outlet property="previousDayButton" destination="25Y-vK-RiE" id="Zar-dI-TOU"/>
                         <outlet property="tabBarItem" destination="mXy-H8-TKI" id="lPS-QN-rLf"/>
                     </connections>
                 </viewController>
