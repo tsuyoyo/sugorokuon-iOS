@@ -65,6 +65,8 @@
 		5E93340A1F73B3A600631C0F /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */; };
 		5E9761111F88E2260020EA80 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9761101F88E2260020EA80 /* SettingViewController.swift */; };
 		5E9761121F88E2260020EA80 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9761101F88E2260020EA80 /* SettingViewController.swift */; };
+		5EA086F11F9C74110021C848 /* RadikoDateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA086F01F9C74110021C848 /* RadikoDateUtil.swift */; };
+		5EA086F21F9C74110021C848 /* RadikoDateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA086F01F9C74110021C848 /* RadikoDateUtil.swift */; };
 		5EAF63221F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */; };
 		5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */; };
 		5EAF63251F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */; };
@@ -216,6 +218,7 @@
 		5E9334051F73927F00631C0F /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		5E9334081F73B3A600631C0F /* TimeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewModel.swift; sourceTree = "<group>"; };
 		5E9761101F88E2260020EA80 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5EA086F01F9C74110021C848 /* RadikoDateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadikoDateUtil.swift; sourceTree = "<group>"; };
 		5EAF63211F6D2491005F74A4 /* TodayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTimeTableParser.swift; sourceTree = "<group>"; };
 		5EAF63241F6D24BB005F74A4 /* WeeklyTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyTimeTableParser.swift; sourceTree = "<group>"; };
 		5EAF63271F6D251E005F74A4 /* TimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableParser.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 		5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewModel.swift; sourceTree = "<group>"; };
 		5ED703731F7E7A5C00A04685 /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
 		5ED703771F7E7B2800A04685 /* StationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationApi.swift; sourceTree = "<group>"; };
+		5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewModel.swift; sourceTree = "<group>"; };
 		5EFD3EE41F769D78006BD744 /* UrlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
 		5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateSelect.storyboard; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 				5ED703761F7E7A6200A04685 /* Api */,
 				5E21DB2C1F5BD73E0042A023 /* Parser */,
 				5EFD3EE41F769D78006BD744 /* UrlManager.swift */,
+				5EA086F01F9C74110021C848 /* RadikoDateUtil.swift */,
 			);
 			path = Radiko;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */,
 				5E8C23001F5A6C94005AEBF1 /* Assets.xcassets */,
 				5E8C23051F5A6C94005AEBF1 /* Info.plist */,
+				5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */,
 				5E8C23021F5A6C94005AEBF1 /* LaunchScreen.storyboard */,
 				5E8C22FD1F5A6C94005AEBF1 /* Main.storyboard */,
 				5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */,
@@ -797,6 +803,7 @@
 				5EAF63251F6D24BB005F74A4 /* WeeklyTimeTableParser.swift in Sources */,
 				5E8C23261F5ADB63005AEBF1 /* Feed.swift in Sources */,
 				5E8C22FA1F5A6C94005AEBF1 /* AppDelegate.swift in Sources */,
+				5EA086F11F9C74110021C848 /* RadikoDateUtil.swift in Sources */,
 				5E8C231F1F5ADAE2005AEBF1 /* Station.swift in Sources */,
 				5ECD42BB1F8362F70071DA94 /* OnAirSongViewModel.swift in Sources */,
 				5E1BB7E21F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */,
@@ -843,6 +850,7 @@
 				5E8C230F1F5A6C94005AEBF1 /* sugorokuon_iosTests.swift in Sources */,
 				5EAF63231F6D2491005F74A4 /* TodayTimeTableParser.swift in Sources */,
 				5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
+				5EA086F21F9C74110021C848 /* RadikoDateUtil.swift in Sources */,
 				5EAF63321F6D2826005F74A4 /* ProviderType.swift in Sources */,
 				5E9761121F88E2260020EA80 /* SettingViewController.swift in Sources */,
 				5EFFDE891F7B287C00EC8839 /* DateSelectViewController.swift in Sources */,
@@ -1048,7 +1056,7 @@
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tsuyoyo.sugorokuon-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = tsuyoyo.sugorokuon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1063,7 +1071,7 @@
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tsuyoyo.sugorokuon-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = tsuyoyo.sugorokuon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

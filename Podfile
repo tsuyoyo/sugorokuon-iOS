@@ -10,6 +10,7 @@ target 'sugorokuon-ios' do
     pod 'XLPagerTabStrip', '~> 7.0'
     pod 'SDWebImage', '~> 4.0'
     pod 'Google-Mobile-Ads-SDK'
+    pod 'Firebase/Core'
 
   # Pods for sugorokuon-ios
 
