@@ -11,6 +11,7 @@ target 'sugorokuon-ios' do
     pod 'SDWebImage', '~> 4.0'
     pod 'Google-Mobile-Ads-SDK'
     pod 'Firebase/Core'
+    pod 'Firebase/Crash'
 
   # Pods for sugorokuon-ios
 

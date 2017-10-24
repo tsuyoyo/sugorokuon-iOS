@@ -102,6 +102,8 @@
 		5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703731F7E7A5C00A04685 /* FeedApi.swift */; };
 		5ED703781F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
 		5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
+		5ED8EAE81F9F77680015B84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */; };
+		5ED8EAE91F9F77690015B84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */; };
 		5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */; };
 		5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
 		5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
@@ -234,6 +236,7 @@
 		5ED703731F7E7A5C00A04685 /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
 		5ED703771F7E7B2800A04685 /* StationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationApi.swift; sourceTree = "<group>"; };
 		5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5ED8EAE51F9F72DD0015B84C /* sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json"; sourceTree = "<group>"; };
 		5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewModel.swift; sourceTree = "<group>"; };
 		5EFD3EE41F769D78006BD744 /* UrlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
 		5EFFDE841F7B27EB00EC8839 /* DateSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateSelect.storyboard; sourceTree = "<group>"; };
@@ -346,6 +349,7 @@
 		5E8C22ED1F5A6C94005AEBF1 = {
 			isa = PBXGroup;
 			children = (
+				5ED8EAE51F9F72DD0015B84C /* sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json */,
 				B3845D384327B7341A538122 /* Frameworks */,
 				2489C76EFC150C00BD45B8C8 /* Pods */,
 				5E8C22F71F5A6C94005AEBF1 /* Products */,
@@ -549,6 +553,7 @@
 				8F40395722B101161FB1142F /* [CP] Embed Pods Frameworks */,
 				28D182F115C79E55924380D6 /* [CP] Copy Pods Resources */,
 				5E0241A41F5CAA25006C2DF4 /* Embed Frameworks */,
+				5ED8EAE71F9F731C0015B84C /* ShellScript */,
 			);
 			buildRules = (
 				5EB012C51F775557001F813C /* PBXBuildRule */,
@@ -643,6 +648,7 @@
 			files = (
 				5E8C23041F5A6C94005AEBF1 /* LaunchScreen.storyboard in Resources */,
 				5EFFDE851F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
+				5ED8EAE81F9F77680015B84C /* GoogleService-Info.plist in Resources */,
 				5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */,
 				5E07314A1F87D7090086D0B1 /* ic_audiotrack_3x.png in Resources */,
 				5E0731491F87D7090086D0B1 /* ic_audiotrack.png in Resources */,
@@ -658,6 +664,7 @@
 			files = (
 				5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
 				5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
+				5ED8EAE91F9F77690015B84C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +700,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sugorokuon-iosTests/Pods-sugorokuon-iosTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5ED8EAE71F9F731C0015B84C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:681058949564:ios:e2d7739d9c04fb2a\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym-util.bash \"/tmp/sugorokuon/sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json\"";
 		};
 		6AD616E4D40A8A79B09876E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
