@@ -3,7 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 sugorokuon-ios/App/Const/Keys.swift
-sugorokuon-ios/GoogleService-Info.plist
+GoogleService-Info.plist
 sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json
 
 ## Build generated

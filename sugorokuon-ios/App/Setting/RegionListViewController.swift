@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Firebase
 
 class RegionListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

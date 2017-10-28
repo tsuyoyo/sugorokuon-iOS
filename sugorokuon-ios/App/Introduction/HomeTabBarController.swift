@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 // Memo :
 // Referred (http://hidef.jp/post-725/) to catch select event on tabBar
@@ -25,6 +26,22 @@ class HomeTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     public func tabBarController(_ tabBarController: UITabBarController,
                                  didSelect viewController: UIViewController) {
+        switch tabBarController.selectedIndex {
+        case 0:
+            Analytics.logEvent(
+                TrackingEvent.PROGRAM_TAB_TAPPED.rawValue,
+                parameters: [:])
+        case 1:
+            Analytics.logEvent(
+                TrackingEvent.ON_AIR_SONGS_TAB_TAPPED.rawValue,
+                parameters: [:])
+        case 2:
+            Analytics.logEvent(
+                TrackingEvent.SETTINGS_TAB_TAPPED.rawValue,
+                parameters: [:])
+        default:
+            print("Unexpected tab is tapped")
+        }
         
         if lastViewControllerIndex == tabBarController.selectedIndex {
             (viewController as? HomeTabBarDelegate)?.didTabSelected()

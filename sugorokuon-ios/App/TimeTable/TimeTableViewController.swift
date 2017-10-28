@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import XLPagerTabStrip
 import SDWebImage
+import Firebase
 
 class TimeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
     
@@ -99,6 +100,10 @@ class TimeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Cell が選択された場合
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        Analytics.logEvent(
+            TrackingEvent.PROGRAM_ITEM_TAPPED.rawValue,
+            parameters: [:])
+        
         let bottomSheet = UIStoryboard(name: "TimeTable", bundle: nil)
             .instantiateViewController(withIdentifier: "programDescription")
             as! ProgramDescriptionViewController

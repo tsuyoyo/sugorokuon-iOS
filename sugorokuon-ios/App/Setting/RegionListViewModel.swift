@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Firebase
 
 protocol RegionListViewModelInput {
     func select(region: Region)
@@ -38,6 +39,11 @@ class RegionListViewModel {
 
 extension RegionListViewModel : RegionListViewModelInput {
     func select(region: Region) {
+        Analytics.logEvent(
+            TrackingEvent.REGION_CHANGED.rawValue,
+            parameters: [
+                TrackingEventParameter.SELECTED_REGION.rawValue: region.value().name
+            ])
         repository.updateRegion(region: region)
     }
 }

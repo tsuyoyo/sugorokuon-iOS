@@ -10,6 +10,8 @@ import UIKit
 import XLPagerTabStrip
 import RxSwift
 import SafariServices
+import Crashlytics
+import Firebase
 
 class OnAirSongViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
 
@@ -111,6 +113,10 @@ class OnAirSongViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ table: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Analytics.logEvent(
+            TrackingEvent.ON_AIR_SONG_ITEM_TAPPED.rawValue,
+            parameters: [:])
+        
         let song = songs[indexPath.row]
         
         // When Japanese is included in urlStr, encode is required otherwise URL(...) returns nil
@@ -119,6 +125,7 @@ class OnAirSongViewController: UIViewController, UITableViewDataSource, UITableV
         let url = URL(string: encodedURL!)!
 
         let safariViewController = SFSafariViewController(url: url)
+        
         present(safariViewController, animated: true, completion: nil)
     }
     

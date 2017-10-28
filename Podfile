@@ -12,7 +12,11 @@ target 'sugorokuon-ios' do
     pod 'Google-Mobile-Ads-SDK'
     pod 'Firebase/Core'
     pod 'Firebase/Crash'
-
+    pod 'Firebase/AdMob'
+    pod 'Firebase/Messaging'
+    pod 'Fabric', '~> 1.7.0'
+    pod 'Crashlytics', '~> 3.9'
+    
   # Pods for sugorokuon-ios
 
   target 'sugorokuon-iosTests' do

@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import RxSwift
+import Firebase
 
 // https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9 を参考に
 class TimeTablePagerViewController: ButtonBarPagerTabStripViewController,
@@ -59,14 +60,17 @@ class TimeTablePagerViewController: ButtonBarPagerTabStripViewController,
     
     @IBAction func onNextDayTapped(_ sender: Any) {
         viewModel.fetchNextDay()
+        Analytics.logEvent(TrackingEvent.NEXT_DAY_TAPPED.rawValue, parameters: [:])
     }
 
     @IBAction func onPreviousDayTapped(_ sender: Any) {
         viewModel.fetchPreviousDay()
+        Analytics.logEvent(TrackingEvent.PREVIOUS_DAY_TAPPED.rawValue, parameters: [:])
     }
     
     func onTitleTapped(sender: UITapGestureRecognizer) {
         showDatePicker()
+        Analytics.logEvent(TrackingEvent.DATE_CHANGE_TAPPED.rawValue, parameters: [:])
     }
     
     func onClosed() {

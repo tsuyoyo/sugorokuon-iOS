@@ -22,11 +22,16 @@
 		5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
 		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
 		5E1A3D801F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
+		5E1B2D7D1FA22AC4000F27BD /* TrackingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2D7C1FA22AC4000F27BD /* TrackingEvent.swift */; };
+		5E1B2D7E1FA22AC4000F27BD /* TrackingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B2D7C1FA22AC4000F27BD /* TrackingEvent.swift */; };
 		5E1BB7DF1F9B83650047F07D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */; };
 		5E1BB7E01F9B83650047F07D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */; };
 		5E1BB7E21F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */; };
 		5E1BB7E31F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */; };
 		5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E21DB2D1F5BD7E50042A023 /* StationParser.swift */; };
+		5E4944D11FA4609A00A992BC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4944D01FA4609A00A992BC /* UserNotifications.framework */; };
+		5E4944D31FA4639500A992BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E4944D21FA4638E00A992BC /* GoogleService-Info.plist */; };
+		5E4944D41FA4639500A992BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E4944D21FA4638E00A992BC /* GoogleService-Info.plist */; };
 		5E54F1801F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
 		5E54F1811F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */; };
 		5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */; };
@@ -39,6 +44,8 @@
 		5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6556671F80E04200647812 /* TimeTableApi.swift */; };
 		5E65566C1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
 		5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65566B1F811A4000647812 /* NowOnAirParser.swift */; };
+		5E671AC31FA4A3A400C97DC6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E671AC21FA4A3A400C97DC6 /* Settings.bundle */; };
+		5E671AC41FA4A3A400C97DC6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E671AC21FA4A3A400C97DC6 /* Settings.bundle */; };
 		5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E6F6C9B1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */; };
 		5E8234D31F94EE0F00486124 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */; };
@@ -92,6 +99,8 @@
 		5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB581161F8D96D0001F5846 /* RegionRepository.swift */; };
 		5EB5972B1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */; };
 		5EB5972C1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */; };
+		5EBF0B561FA45690003F7AAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF0B551FA45690003F7AAF /* GoogleService-Info.plist */; };
+		5EBF0B571FA45690003F7AAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF0B551FA45690003F7AAF /* GoogleService-Info.plist */; };
 		5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */; };
 		5ECD42B81F830CC50071DA94 /* OnAirSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */; };
@@ -102,8 +111,6 @@
 		5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703731F7E7A5C00A04685 /* FeedApi.swift */; };
 		5ED703781F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
 		5ED703791F7E7B2800A04685 /* StationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED703771F7E7B2800A04685 /* StationApi.swift */; };
-		5ED8EAE81F9F77680015B84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */; };
-		5ED8EAE91F9F77690015B84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */; };
 		5EF9DC861F716392005B4D3D /* TimeTablePagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */; };
 		5EFD3EE51F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
 		5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD3EE41F769D78006BD744 /* UrlManager.swift */; };
@@ -126,6 +133,7 @@
 			isEditable = 1;
 			outputFiles = (
 			);
+			script = "";
 		};
 		5EB012C51F775557001F813C /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
@@ -134,6 +142,7 @@
 			isEditable = 1;
 			outputFiles = (
 			);
+			script = "";
 		};
 /* End PBXBuildRule section */
 
@@ -181,6 +190,7 @@
 		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
 		5E188CF21F8BA070004E2A32 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
+		5E1B2D7C1FA22AC4000F27BD /* TrackingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingEvent.swift; sourceTree = "<group>"; };
 		5E1BB7D81F9B7FD60047F07D /* ic_radio_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_3x.png; sourceTree = "<group>"; };
 		5E1BB7D91F9B7FD70047F07D /* ic_radio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio.png; sourceTree = "<group>"; };
 		5E1BB7DA1F9B7FD70047F07D /* ic_radio_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_2x.png; sourceTree = "<group>"; };
@@ -190,12 +200,15 @@
 		5E1BB7DE1F9B83650047F07D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarController.swift; path = "sugorokuon-ios/App/Introduction/HomeTabBarController.swift"; sourceTree = SOURCE_ROOT; };
 		5E1BB7E11F9B83AC0047F07D /* HomeTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarDelegate.swift; path = "sugorokuon-ios/App/Introduction/HomeTabBarDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		5E21DB2D1F5BD7E50042A023 /* StationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationParser.swift; sourceTree = "<group>"; };
+		5E4944D01FA4609A00A992BC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		5E4944D21FA4638E00A992BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E54F17F1F8CFE5E000ED5CA /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
 		5E54F1821F8CFE88000ED5CA /* RegionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewModel.swift; sourceTree = "<group>"; };
 		5E54F1851F8CFEDE000ED5CA /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfo.swift; sourceTree = "<group>"; };
 		5E6556671F80E04200647812 /* TimeTableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableApi.swift; sourceTree = "<group>"; };
 		5E65566B1F811A4000647812 /* NowOnAirParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowOnAirParser.swift; sourceTree = "<group>"; };
+		5E671AC21FA4A3A400C97DC6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		5E6F6C991F6EAAC9008634A6 /* StationResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationResponseParser.swift; sourceTree = "<group>"; };
 		5E8234D21F94EE0F00486124 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		5E8C22F61F5A6C94005AEBF1 /* sugorokuon-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugorokuon-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,12 +243,13 @@
 		5EB012C61F77E196001F813C /* ProgramDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDescriptionViewController.swift; sourceTree = "<group>"; };
 		5EB581161F8D96D0001F5846 /* RegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRepository.swift; sourceTree = "<group>"; };
 		5EB5972A1F978BB400EF9AF7 /* IntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewModel.swift; sourceTree = "<group>"; };
+		5EBF0B541FA418DC003F7AAF /* sugorokuon-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sugorokuon-ios.entitlements"; sourceTree = "<group>"; };
+		5EBF0B551FA45690003F7AAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5ECC931D1F81BE610079A835 /* OnAirSongPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewController.swift; sourceTree = "<group>"; };
 		5ECD42B71F830CC50071DA94 /* OnAirSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewController.swift; sourceTree = "<group>"; };
 		5ECD42BA1F8362F70071DA94 /* OnAirSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongViewModel.swift; sourceTree = "<group>"; };
 		5ED703731F7E7A5C00A04685 /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
 		5ED703771F7E7B2800A04685 /* StationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationApi.swift; sourceTree = "<group>"; };
-		5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5ED8EAE51F9F72DD0015B84C /* sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json"; sourceTree = "<group>"; };
 		5EF9DC851F716392005B4D3D /* TimeTablePagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePagerViewModel.swift; sourceTree = "<group>"; };
 		5EFD3EE41F769D78006BD744 /* UrlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
@@ -260,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4944D11FA4609A00A992BC /* UserNotifications.framework in Frameworks */,
 				5E02419F1F5CAA25006C2DF4 /* SugorokuonPlaygroundFramework.framework in Frameworks */,
 				624398EB0EC267DC8D8824B2 /* Pods_sugorokuon_ios.framework in Frameworks */,
 			);
@@ -349,6 +364,8 @@
 		5E8C22ED1F5A6C94005AEBF1 = {
 			isa = PBXGroup;
 			children = (
+				5E671AC21FA4A3A400C97DC6 /* Settings.bundle */,
+				5E4944D21FA4638E00A992BC /* GoogleService-Info.plist */,
 				5ED8EAE51F9F72DD0015B84C /* sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json */,
 				B3845D384327B7341A538122 /* Frameworks */,
 				2489C76EFC150C00BD45B8C8 /* Pods */,
@@ -372,6 +389,8 @@
 		5E8C22F81F5A6C94005AEBF1 /* sugorokuon-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5EBF0B551FA45690003F7AAF /* GoogleService-Info.plist */,
+				5EBF0B541FA418DC003F7AAF /* sugorokuon-ios.entitlements */,
 				5E8C231B1F5ADA11005AEBF1 /* App */,
 				5E8C231A1F5ADA08005AEBF1 /* Model */,
 				5E21DB2B1F5BD7370042A023 /* Radiko */,
@@ -379,7 +398,6 @@
 				5E8C22F91F5A6C94005AEBF1 /* AppDelegate.swift */,
 				5E8C23001F5A6C94005AEBF1 /* Assets.xcassets */,
 				5E8C23051F5A6C94005AEBF1 /* Info.plist */,
-				5ED8EAE31F9F6FBE0015B84C /* GoogleService-Info.plist */,
 				5E8C23021F5A6C94005AEBF1 /* LaunchScreen.storyboard */,
 				5E8C22FD1F5A6C94005AEBF1 /* Main.storyboard */,
 				5E8C22FB1F5A6C94005AEBF1 /* ViewController.swift */,
@@ -498,6 +516,7 @@
 				5E54F1851F8CFEDE000ED5CA /* Region.swift */,
 				5E54F1881F8CFFD8000ED5CA /* RegionInfo.swift */,
 				5E9334051F73927F00631C0F /* Week.swift */,
+				5E1B2D7C1FA22AC4000F27BD /* TrackingEvent.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -505,6 +524,7 @@
 		B3845D384327B7341A538122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E4944D01FA4609A00A992BC /* UserNotifications.framework */,
 				7C815211F9BB19B538E03B83 /* Pods_sugorokuon_ios.framework */,
 				E365C316A0A64E28A17AC2D7 /* Pods_sugorokuon_iosTests.framework */,
 			);
@@ -553,7 +573,9 @@
 				8F40395722B101161FB1142F /* [CP] Embed Pods Frameworks */,
 				28D182F115C79E55924380D6 /* [CP] Copy Pods Resources */,
 				5E0241A41F5CAA25006C2DF4 /* Embed Frameworks */,
-				5ED8EAE71F9F731C0015B84C /* ShellScript */,
+				5ED8EAE71F9F731C0015B84C /* Firebase crash */,
+				5E1B2D781FA21C53000F27BD /* Fabric */,
+				5E671AC11FA4A12300C97DC6 /* License plist */,
 			);
 			buildRules = (
 				5EB012C51F775557001F813C /* PBXBuildRule */,
@@ -605,7 +627,12 @@
 					5E8C22F51F5A6C94005AEBF1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = ZJ43ZSA54N;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5E8C23091F5A6C94005AEBF1 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -648,12 +675,14 @@
 			files = (
 				5E8C23041F5A6C94005AEBF1 /* LaunchScreen.storyboard in Resources */,
 				5EFFDE851F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
-				5ED8EAE81F9F77680015B84C /* GoogleService-Info.plist in Resources */,
 				5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */,
 				5E07314A1F87D7090086D0B1 /* ic_audiotrack_3x.png in Resources */,
 				5E0731491F87D7090086D0B1 /* ic_audiotrack.png in Resources */,
 				5E8C23011F5A6C94005AEBF1 /* Assets.xcassets in Resources */,
+				5EBF0B561FA45690003F7AAF /* GoogleService-Info.plist in Resources */,
+				5E4944D31FA4639500A992BC /* GoogleService-Info.plist in Resources */,
 				5EAF633F1F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
+				5E671AC31FA4A3A400C97DC6 /* Settings.bundle in Resources */,
 				5E8C22FF1F5A6C94005AEBF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,8 +692,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EAF63401F6D5F34005F74A4 /* TimeTable.storyboard in Resources */,
+				5E4944D41FA4639500A992BC /* GoogleService-Info.plist in Resources */,
+				5E671AC41FA4A3A400C97DC6 /* Settings.bundle in Resources */,
+				5EBF0B571FA45690003F7AAF /* GoogleService-Info.plist in Resources */,
 				5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
-				5ED8EAE91F9F77690015B84C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,18 +732,47 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sugorokuon-iosTests/Pods-sugorokuon-iosTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5ED8EAE71F9F731C0015B84C /* ShellScript */ = {
+		5E1B2D781FA21C53000F27BD /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Fabric;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:681058949564:ios:e2d7739d9c04fb2a\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym-util.bash \"/tmp/sugorokuon/sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json\"";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ccc0f406fb2ade0595513987fb964d7bcb3fcaad d3e5ac4466c2aee6321787725e9e9e2925bc05225326ba6ff4c0b03e6dae0ba4\n";
+		};
+		5E671AC11FA4A12300C97DC6 /* License plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "License plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\ncd $SRCROOT\n/usr/local/bin/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi";
+		};
+		5ED8EAE71F9F731C0015B84C /* Firebase crash */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase crash";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:681058949564:ios:e2d7739d9c04fb2a\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"sugorokuonapp-firebase-crashreporting-gt8gv-747126281e.json\"";
 		};
 		6AD616E4D40A8A79B09876E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -788,6 +848,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1B2D7D1FA22AC4000F27BD /* TrackingEvent.swift in Sources */,
 				5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */,
 				5EAF632B1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
 				5E1BB7DF1F9B83650047F07D /* HomeTabBarController.swift in Sources */,
@@ -848,6 +909,7 @@
 				5EB5972C1F978BB400EF9AF7 /* IntroductionViewModel.swift in Sources */,
 				5ECC931F1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
 				5EAF63311F6D2821005F74A4 /* Feed.swift in Sources */,
+				5E1B2D7E1FA22AC4000F27BD /* TrackingEvent.swift in Sources */,
 				5EB012C81F77E196001F813C /* ProgramDescriptionViewController.swift in Sources */,
 				5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */,
 				5EFD3EEA1F76AC4E006BD744 /* TimeTablePagerViewModel.swift in Sources */,
@@ -1072,12 +1134,17 @@
 			baseConfigurationReference = 3E6B4E5649A82C8BAF16EC4F /* Pods-sugorokuon-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "sugorokuon-ios/sugorokuon-ios.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZJ43ZSA54N;
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsuyoyo.sugorokuon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "76c45640-b87b-4ff8-a90a-553ee490986e";
+				PROVISIONING_PROFILE_SPECIFIER = "Sugorokuon Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1087,12 +1154,16 @@
 			baseConfigurationReference = A02A0944456CAE26C0C55A82 /* Pods-sugorokuon-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZJ43ZSA54N;
+				CODE_SIGN_ENTITLEMENTS = "sugorokuon-ios/sugorokuon-ios.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "sugorokuon-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsuyoyo.sugorokuon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1137,7 +1208,7 @@
 				5E0241A31F5CAA25006C2DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		5E8C22F11F5A6C94005AEBF1 /* Build configuration list for PBXProject "sugorokuon-ios" */ = {
 			isa = XCConfigurationList;
@@ -1146,7 +1217,7 @@
 				5E8C23121F5A6C94005AEBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		5E8C23131F5A6C94005AEBF1 /* Build configuration list for PBXNativeTarget "sugorokuon-ios" */ = {
 			isa = XCConfigurationList;
@@ -1155,7 +1226,7 @@
 				5E8C23151F5A6C94005AEBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		5E8C23161F5A6C94005AEBF1 /* Build configuration list for PBXNativeTarget "sugorokuon-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -1164,7 +1235,7 @@
 				5E8C23181F5A6C94005AEBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
