@@ -13,7 +13,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var table: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,10 +22,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         switch indexPath.row {
         case 0:
-            label.text = "番組表を見たい地域"
-            break
-        case 1:
-            label.text = "License"
+            label.text = "地域設定"
             break
         default:
             break
@@ -39,8 +36,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 0:
             launchRegionList()
             table.deselectRow(at: indexPath, animated: false)
-            break
-        case 1:
             break
         default:
             break

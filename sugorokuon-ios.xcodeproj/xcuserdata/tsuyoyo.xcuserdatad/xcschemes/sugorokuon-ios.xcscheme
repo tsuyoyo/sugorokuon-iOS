@@ -104,6 +104,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "sugorokuon-ios"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
