@@ -18,6 +18,18 @@
 		5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */; };
 		5E0891041F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
 		5E0891051F794BBD009BB71C /* OneDayTimeTableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */; };
+		5E1091C31FA5AB6300FDC380 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091C21FA5AB6300FDC380 /* SearchViewController.swift */; };
+		5E1091C41FA5AB6300FDC380 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091C21FA5AB6300FDC380 /* SearchViewController.swift */; };
+		5E1091C71FA5ABA000FDC380 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091C51FA5ABA000FDC380 /* SearchTableViewCell.swift */; };
+		5E1091C81FA5ABA000FDC380 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091C51FA5ABA000FDC380 /* SearchTableViewCell.swift */; };
+		5E1091C91FA5ABA000FDC380 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1091C61FA5ABA000FDC380 /* SearchTableViewCell.xib */; };
+		5E1091CA1FA5ABA000FDC380 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1091C61FA5ABA000FDC380 /* SearchTableViewCell.xib */; };
+		5E1091CC1FA5CCEF00FDC380 /* SearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091CB1FA5CCEF00FDC380 /* SearchApi.swift */; };
+		5E1091CD1FA5CCEF00FDC380 /* SearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091CB1FA5CCEF00FDC380 /* SearchApi.swift */; };
+		5E1091CF1FA5CD0900FDC380 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091CE1FA5CD0900FDC380 /* SearchViewModel.swift */; };
+		5E1091D01FA5CD0900FDC380 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091CE1FA5CD0900FDC380 /* SearchViewModel.swift */; };
+		5E1091D21FA5F69B00FDC380 /* SearchResultProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091D11FA5F69B00FDC380 /* SearchResultProgram.swift */; };
+		5E1091D31FA5F69B00FDC380 /* SearchResultProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1091D11FA5F69B00FDC380 /* SearchResultProgram.swift */; };
 		5E188CF31F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
 		5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E188CF21F8BA070004E2A32 /* Keys.swift */; };
 		5E1A3D7F1F81368700F443FC /* OnAirSongPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */; };
@@ -188,6 +200,12 @@
 		5E0731471F87D7090086D0B1 /* ic_audiotrack_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_3x.png; sourceTree = "<group>"; };
 		5E0731481F87D7090086D0B1 /* ic_audiotrack_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_audiotrack_2x.png; sourceTree = "<group>"; };
 		5E0891031F794BBD009BB71C /* OneDayTimeTableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDayTimeTableParser.swift; sourceTree = "<group>"; };
+		5E1091C21FA5AB6300FDC380 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5E1091C51FA5ABA000FDC380 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		5E1091C61FA5ABA000FDC380 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		5E1091CB1FA5CCEF00FDC380 /* SearchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApi.swift; sourceTree = "<group>"; };
+		5E1091CE1FA5CD0900FDC380 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		5E1091D11FA5F69B00FDC380 /* SearchResultProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultProgram.swift; sourceTree = "<group>"; };
 		5E188CF21F8BA070004E2A32 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5E1A3D7E1F81368700F443FC /* OnAirSongPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirSongPagerViewModel.swift; sourceTree = "<group>"; };
 		5E1B2D7C1FA22AC4000F27BD /* TrackingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingEvent.swift; sourceTree = "<group>"; };
@@ -334,6 +352,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		5E1091C11FA5AB0400FDC380 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5E1091C21FA5AB6300FDC380 /* SearchViewController.swift */,
+				5E1091CE1FA5CD0900FDC380 /* SearchViewModel.swift */,
+				5E1091C51FA5ABA000FDC380 /* SearchTableViewCell.swift */,
+				5E1091C61FA5ABA000FDC380 /* SearchTableViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		5E21DB2B1F5BD7370042A023 /* Radiko */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +455,7 @@
 				5E8C231E1F5ADAE2005AEBF1 /* Station.swift */,
 				5E02418E1F5C2CA3006C2DF4 /* StationLogo.swift */,
 				5E8C23201F5ADAF5005AEBF1 /* TimeTable.swift */,
+				5E1091D11FA5F69B00FDC380 /* SearchResultProgram.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -433,6 +463,7 @@
 		5E8C231B1F5ADA11005AEBF1 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5E1091C11FA5AB0400FDC380 /* Search */,
 				5EB597291F978B0F00EF9AF7 /* Introduction */,
 				5EFD3EE71F76A215006BD744 /* Const */,
 				5EAF633A1F6D5E18005F74A4 /* Home */,
@@ -505,6 +536,7 @@
 				5ED703731F7E7A5C00A04685 /* FeedApi.swift */,
 				5ED703771F7E7B2800A04685 /* StationApi.swift */,
 				5E6556671F80E04200647812 /* TimeTableApi.swift */,
+				5E1091CB1FA5CCEF00FDC380 /* SearchApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -575,7 +607,6 @@
 				5E0241A41F5CAA25006C2DF4 /* Embed Frameworks */,
 				5ED8EAE71F9F731C0015B84C /* Firebase crash */,
 				5E1B2D781FA21C53000F27BD /* Fabric */,
-				5E671AC11FA4A12300C97DC6 /* License plist */,
 			);
 			buildRules = (
 				5EB012C51F775557001F813C /* PBXBuildRule */,
@@ -678,6 +709,7 @@
 				5E07314B1F87D7090086D0B1 /* ic_audiotrack_2x.png in Resources */,
 				5E07314A1F87D7090086D0B1 /* ic_audiotrack_3x.png in Resources */,
 				5E0731491F87D7090086D0B1 /* ic_audiotrack.png in Resources */,
+				5E1091C91FA5ABA000FDC380 /* SearchTableViewCell.xib in Resources */,
 				5E8C23011F5A6C94005AEBF1 /* Assets.xcassets in Resources */,
 				5EBF0B561FA45690003F7AAF /* GoogleService-Info.plist in Resources */,
 				5E4944D31FA4639500A992BC /* GoogleService-Info.plist in Resources */,
@@ -696,6 +728,7 @@
 				5E671AC41FA4A3A400C97DC6 /* Settings.bundle in Resources */,
 				5EBF0B571FA45690003F7AAF /* GoogleService-Info.plist in Resources */,
 				5EFFDE861F7B27EB00EC8839 /* DateSelect.storyboard in Resources */,
+				5E1091CA1FA5ABA000FDC380 /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,20 +778,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" ccc0f406fb2ade0595513987fb964d7bcb3fcaad d3e5ac4466c2aee6321787725e9e9e2925bc05225326ba6ff4c0b03e6dae0ba4\n";
-		};
-		5E671AC11FA4A12300C97DC6 /* License plist */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "License plist";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\ncd $SRCROOT\n/usr/local/bin/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi";
 		};
 		5ED8EAE71F9F731C0015B84C /* Firebase crash */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -849,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E1B2D7D1FA22AC4000F27BD /* TrackingEvent.swift in Sources */,
+				5E1091D21FA5F69B00FDC380 /* SearchResultProgram.swift in Sources */,
 				5E21DB2E1F5BD7E50042A023 /* StationParser.swift in Sources */,
 				5EAF632B1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
 				5E1BB7DF1F9B83650047F07D /* HomeTabBarController.swift in Sources */,
@@ -858,6 +878,7 @@
 				5E9761111F88E2260020EA80 /* SettingViewController.swift in Sources */,
 				5E9334031F73916400631C0F /* TimeTableRepository.swift in Sources */,
 				5E9333FE1F7390B800631C0F /* TimeTableViewController.swift in Sources */,
+				5E1091CC1FA5CCEF00FDC380 /* SearchApi.swift in Sources */,
 				5E6F6C9A1F6EAAC9008634A6 /* StationResponseParser.swift in Sources */,
 				5E54F1801F8CFE5E000ED5CA /* RegionListViewController.swift in Sources */,
 				5ECC931E1F81BE610079A835 /* OnAirSongPagerViewController.swift in Sources */,
@@ -890,11 +911,14 @@
 				5E1BB7E21F9B83AC0047F07D /* HomeTabBarDelegate.swift in Sources */,
 				5EB581171F8D96D0001F5846 /* RegionRepository.swift in Sources */,
 				5E8234D31F94EE0F00486124 /* IntroductionViewController.swift in Sources */,
+				5E1091C31FA5AB6300FDC380 /* SearchViewController.swift in Sources */,
 				5E9334091F73B3A600631C0F /* TimeTableViewModel.swift in Sources */,
 				5E54F1831F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5E6556681F80E04200647812 /* TimeTableApi.swift in Sources */,
 				5E8C231D1F5ADA84005AEBF1 /* Program.swift in Sources */,
+				5E1091CF1FA5CD0900FDC380 /* SearchViewModel.swift in Sources */,
 				5E9334061F73927F00631C0F /* Week.swift in Sources */,
+				5E1091C71FA5ABA000FDC380 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,9 +942,12 @@
 				5E65566D1F811A4000647812 /* NowOnAirParser.swift in Sources */,
 				5EAF632F1F6D281A005F74A4 /* TimeTable.swift in Sources */,
 				5EAF632E1F6D2815005F74A4 /* Station.swift in Sources */,
+				5E1091CD1FA5CCEF00FDC380 /* SearchApi.swift in Sources */,
 				5E1BB7E01F9B83650047F07D /* HomeTabBarController.swift in Sources */,
+				5E1091D01FA5CD0900FDC380 /* SearchViewModel.swift in Sources */,
 				5EAF63291F6D251E005F74A4 /* TimeTableParser.swift in Sources */,
 				5E6556691F80E04200647812 /* TimeTableApi.swift in Sources */,
+				5E1091C81FA5ABA000FDC380 /* SearchTableViewCell.swift in Sources */,
 				5EB581181F8D96D0001F5846 /* RegionRepository.swift in Sources */,
 				5E54F1841F8CFE88000ED5CA /* RegionListViewModel.swift in Sources */,
 				5EAF63301F6D281D005F74A4 /* OnAirSong.swift in Sources */,
@@ -943,8 +970,10 @@
 				5EFD3EE91F76AC3B006BD744 /* StationLogoParser.swift in Sources */,
 				5EFD3EE61F769D78006BD744 /* UrlManager.swift in Sources */,
 				5EAF63331F6D282A005F74A4 /* StationLogo.swift in Sources */,
+				5E1091D31FA5F69B00FDC380 /* SearchResultProgram.swift in Sources */,
 				5ECD42B91F830CC50071DA94 /* OnAirSongViewController.swift in Sources */,
 				5E9334071F73927F00631C0F /* Week.swift in Sources */,
+				5E1091C41FA5AB6300FDC380 /* SearchViewController.swift in Sources */,
 				5EAF632C1F6D25A1005F74A4 /* ProgreamParser.swift in Sources */,
 				5E188CF41F8BA070004E2A32 /* Keys.swift in Sources */,
 				5ED703751F7E7A5C00A04685 /* FeedApi.swift in Sources */,
@@ -1163,8 +1192,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsuyoyo.sugorokuon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e9f52d03-5dda-46b1-8994-293b1802216d";
-				PROVISIONING_PROFILE_SPECIFIER = "app store";
+				PROVISIONING_PROFILE = "8989a38f-1579-41ce-ba4d-5929a072aa0b";
+				PROVISIONING_PROFILE_SPECIFIER = "ad hoc";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

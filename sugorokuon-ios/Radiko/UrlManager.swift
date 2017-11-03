@@ -35,4 +35,28 @@ class UrlManager {
         return "\(Domain)/v3/feed/pc/noa/\(id).xml"
     }
     
+    public func search(word : String, region : String) -> String {
+        let encodedWord = word.addingPercentEncoding(
+            withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let uid : String = ProcessInfo.processInfo.globallyUniqueString
+        let replacedUid = uid.replacingOccurrences(of: "-", with: "")
+            .substring(to: uid.index(uid.startIndex, offsetBy: 32))
+            .lowercased()
+        
+        return "\(Domain)/v3/api/program/search?"
+            + "key=\(encodedWord ?? "")"
+            + "&filter="
+            + "&start_day="
+            + "&end_day="
+            + "&area_id=\(region)"
+            + "&region_id="
+            + "&cul_area_id=\(region)"
+            + "&page_idx="
+            + "&uid=\(replacedUid)"
+            + "&row_limit=12"
+            + "&app_id=pc"
+            + "&action_id=0"
+    }
+    
 }
