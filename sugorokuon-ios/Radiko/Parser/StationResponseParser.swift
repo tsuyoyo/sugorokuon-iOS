@@ -63,7 +63,6 @@ class StationResponseParser: NSObject, XMLParserDelegate {
     
     private func onStationParsed(event : RxSwift.Event<Station>) -> Void {
         if let station = event.element {
-            print("\(station.name) is onNext, having \(station.logos.count) logos")
             stations.append(station)
         }
     }
