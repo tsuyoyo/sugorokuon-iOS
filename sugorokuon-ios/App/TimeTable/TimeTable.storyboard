@@ -120,8 +120,8 @@
                     <connections>
                         <segue destination="BXp-HJ-bph" kind="relationship" relationship="viewControllers" id="XC8-mG-v9b"/>
                         <segue destination="0DW-gn-91p" kind="relationship" relationship="viewControllers" id="pFs-Fb-alT"/>
-                        <segue destination="9np-dT-9YZ" kind="relationship" relationship="viewControllers" id="Huv-1T-fFp"/>
                         <segue destination="o23-gs-G4q" kind="relationship" relationship="viewControllers" id="WDc-F6-78x"/>
+                        <segue destination="9np-dT-9YZ" kind="relationship" relationship="viewControllers" id="Huv-1T-fFp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBs-DR-AGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -619,7 +619,7 @@
             </objects>
             <point key="canvasLocation" x="1448.8" y="-527.58620689655174"/>
         </scene>
-        <!--Item-->
+        <!--検索-->
         <scene sceneID="bAf-O9-QFf">
             <objects>
                 <viewController storyboardIdentifier="search" id="o23-gs-G4q" customClass="SearchViewController" customModule="sugorokuon_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -681,7 +681,7 @@
                             <constraint firstAttribute="trailing" secondItem="Ckz-eh-Rp9" secondAttribute="trailing" id="qPP-SR-hfG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="oS2-yX-d5w"/>
+                    <tabBarItem key="tabBarItem" title="検索" image="ic_search" id="oS2-yX-d5w"/>
                     <connections>
                         <outlet property="loading" destination="Aon-Ak-XvO" id="yB9-NA-euo"/>
                         <outlet property="searchResultTable" destination="KiF-tB-554" id="obi-K1-Uh1"/>
@@ -879,6 +879,7 @@
     <resources>
         <image name="ic_audiotrack" width="24" height="24"/>
         <image name="ic_radio" width="24" height="24"/>
+        <image name="ic_search" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
         <image name="ic_settings.png" width="24" height="24"/>
     </resources>
