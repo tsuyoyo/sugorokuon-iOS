@@ -33,20 +33,20 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6IE-od-1LU">
-                        <rect key="frame" x="16" y="58" width="44" height="44"/>
+                        <rect key="frame" x="22" y="58" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="Ung-hh-C32"/>
                             <constraint firstAttribute="height" constant="44" id="t6n-Ux-WIP"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="花の係長、よっ!! お疲れさん!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePX-an-Q7m">
-                        <rect key="frame" x="72" y="58" width="390" height="17"/>
+                        <rect key="frame" x="82" y="58" width="380" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パーソナリティ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghb-Oy-psJ">
-                        <rect key="frame" x="72" y="85.5" width="100" height="17"/>
+                        <rect key="frame" x="82" y="85.5" width="100" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -61,14 +61,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="hup-9O-GGG" secondAttribute="bottom" constant="8" id="5tY-4q-EmT"/>
-                    <constraint firstItem="ghb-Oy-psJ" firstAttribute="leading" secondItem="6IE-od-1LU" secondAttribute="trailing" constant="12" id="95w-ff-Hen"/>
+                    <constraint firstItem="ghb-Oy-psJ" firstAttribute="leading" secondItem="6IE-od-1LU" secondAttribute="trailing" constant="16" id="95w-ff-Hen"/>
                     <constraint firstItem="6IE-od-1LU" firstAttribute="top" secondItem="Nd6-u0-Jfa" secondAttribute="bottom" constant="8" id="Dqm-hA-cMd"/>
                     <constraint firstItem="ePX-an-Q7m" firstAttribute="top" secondItem="6IE-od-1LU" secondAttribute="top" id="Ehq-aa-3ji"/>
                     <constraint firstItem="hup-9O-GGG" firstAttribute="top" secondItem="ghb-Oy-psJ" secondAttribute="bottom" id="KLZ-CT-fuw"/>
+                    <constraint firstItem="6IE-od-1LU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="14" id="N8j-JB-6UC"/>
                     <constraint firstItem="Nd6-u0-Jfa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RHF-Ki-QnK"/>
-                    <constraint firstItem="ePX-an-Q7m" firstAttribute="leading" secondItem="6IE-od-1LU" secondAttribute="trailing" constant="12" id="RVb-MK-8MX"/>
+                    <constraint firstItem="ePX-an-Q7m" firstAttribute="leading" secondItem="6IE-od-1LU" secondAttribute="trailing" constant="16" id="RVb-MK-8MX"/>
                     <constraint firstItem="ghb-Oy-psJ" firstAttribute="bottom" secondItem="6IE-od-1LU" secondAttribute="bottom" id="Sae-g5-T48"/>
-                    <constraint firstItem="6IE-od-1LU" firstAttribute="leading" secondItem="Nd6-u0-Jfa" secondAttribute="leading" id="Vni-Aa-z8A"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ePX-an-Q7m" secondAttribute="trailing" constant="8" id="aaR-S6-wJH"/>
                     <constraint firstItem="hup-9O-GGG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="g6r-Kg-Nd4"/>
                     <constraint firstItem="Nd6-u0-Jfa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jgT-qJ-e4o"/>

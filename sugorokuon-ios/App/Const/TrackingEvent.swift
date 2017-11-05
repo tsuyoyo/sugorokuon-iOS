@@ -18,6 +18,8 @@ enum TrackingEvent : String {
     case NEXT_DAY_TAPPED = "next_day_tapped"
     case PREVIOUS_DAY_TAPPED = "previous_day_tapped"
     case DATE_CHANGE_TAPPED = "date_change_tapped"
+    case PROGRAM_SEARCHED = "program_searched"
+    case SEARCH_RESULT_TAPPED = "search_result_tapped"
 }
 
 enum TrackingEventParameter : String {

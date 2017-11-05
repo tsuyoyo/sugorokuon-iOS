@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Firebase
 
 class SearchViewController: UIViewController {
     
@@ -69,6 +70,10 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController : UISearchBarDelegate {
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Analytics.logEvent(
+            TrackingEvent.SEARCH_RESULT_TAPPED.rawValue,
+            parameters: [:])
+        
         if let word = searchBar.text {
             viewModel.search(word: word, region: self.region)
         }
@@ -77,7 +82,21 @@ extension SearchViewController : UISearchBarDelegate {
 }
 
 extension SearchViewController : UITableViewDelegate {
-    
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        Analytics.logEvent(
+            TrackingEvent.PROGRAM_SEARCHED.rawValue,
+            parameters: [:])
+        
+        let bottomSheet = UIStoryboard(name: "TimeTable", bundle: nil)
+            .instantiateViewController(withIdentifier: "programDescription")
+            as! ProgramDescriptionViewController
+        
+        bottomSheet.modalPresentationStyle = .overCurrentContext
+        bottomSheet.set(program: searchResult[indexPath.row].program)
+        present(bottomSheet, animated: true, completion: nil)
+        
+        table.deselectRow(at: indexPath, animated: false)
+    }
 }
 
 extension SearchViewController : UITableViewDataSource {

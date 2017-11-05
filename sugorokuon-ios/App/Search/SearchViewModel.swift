@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-typealias SearchResult = (program : SearchResultProgram, station: Station)
+typealias SearchResult = (program : Program, station: Station)
 
 protocol SearchViewModelInput {
     func search(word: String, region: Region)
@@ -67,12 +67,32 @@ extension SearchViewModel : SearchViewModelInput {
         var results = Array<SearchResult>()
         
         foundPrograms.forEach({ (program) in
+            
+            var builder = Program.Builder()
+                .start(from: program.start)
+                .end(at: program.end)
+                .title(title: program.title)
+                .personality(personality: program.personality)
+            
+            if let description = program.description {
+                builder = builder.description(description: description)
+            }
+            if let info = program.info {
+                builder = builder.info(info: info)
+            }
+            if let url = program.url {
+                builder = builder.url(url: url)
+            }
+            if let image = program.image {
+                builder = builder.image(image: image)
+            }
+
             let station = stations.first(where: { s -> Bool in
                 s.id == program.stationId }
             )
             if let s = station {
                 results.append(SearchResult(
-                    program: program,
+                    program: builder.build()!,
                     station: s
                 ))
             }
@@ -80,7 +100,7 @@ extension SearchViewModel : SearchViewModelInput {
         
         // Sort results by latest order.
         results.sort { (r, l) -> Bool in
-            return r.program.start > l.program.start
+            return r.program.startTime > l.program.startTime
         }
         
         return results

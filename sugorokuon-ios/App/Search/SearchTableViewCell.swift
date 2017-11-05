@@ -45,13 +45,13 @@ class SearchTableViewCell: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier:"ja_JP")
         dateFormatter.dateFormat = "MM/dd(E)"
-        onAirDate.text = dateFormatter.string(from: searchResult.program.start)
+        onAirDate.text = dateFormatter.string(from: searchResult.program.startTime)
         
         // time
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"
-        let startTime = timeFormatter.string(from: searchResult.program.start)
-        let endTime = timeFormatter.string(from: searchResult.program.end)
+        let startTime = timeFormatter.string(from: searchResult.program.startTime)
+        let endTime = timeFormatter.string(from: searchResult.program.endTime)
         onAirTime.text = "\(startTime) - \(endTime)"
         
         // image
